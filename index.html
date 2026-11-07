@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="mr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>किल्ले प्रतापगड | दिवाळी मातीचा किल्ला प्रतिकृती - प्रतापगड निर्मिती टीम</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Authentic Marathi Balbodh Fonts (Mukta & Tiro Devanagari Marathi) for Proper Jodakshare (जोडाक्षरे) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@600;700&family=Mukta:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bhagwa: {
+                            DEFAULT: '#FF5E0E',
+                            dark: '#CC4400',
+                            light: '#FF8547',
+                            glow: '#FF9E44'
+                        },
+                        fort: {
+                            950: '#110C08',
+                            900: '#1B130D',
+                            800: '#2A1E15',
+                            700: '#3D2C1F',
+                            600: '#57402E',
+                            stone: '#8C735B'
+                        },
+                        gold: {
+                            DEFAULT: '#F59E0B',
+                            light: '#FDE68A',
+                            royal: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Mukta', 'sans-serif'],
+                        heritage: ['Tiro Devanagari Marathi', 'Khand', 'serif'],
+                        display: ['Khand', 'Mukta', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Heritage Styling, Authentic Marathi Jodakshare (जोडाक्षरे) & Festive Animations */
+        body, h1, h2, h3, h4, p, span, button, a, input, textarea, select {
+            font-variant-ligatures: normal;
+            font-feature-settings: "locl" 1, "akhn" 1, "rphf" 1, "rkrf" 1, "pref" 1, "blwf" 1, "abvf" 1, "half" 1, "pstf" 1, "vatu" 1, "cjct" 1, "pres" 1, "abvs" 1, "blws" 1, "psts" 1;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            background-color: #110C08;
+            color: #FBF5EC;
+            overflow-x: hidden;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        /* Fort Battlement (Buruj/Charya) Top Pattern */
+        .battlement-border {
+            background-image: linear-gradient(
+                to right,
+                #2A1E15 0%, #2A1E15 60%,
+                transparent 60%, transparent 100%
+            );
+            background-size: 36px 14px;
+            background-repeat: repeat-x;
+            height: 14px;
+            width: 100%;
+        }
+
+        /* Glowing Diya Flame Animation */
+        @keyframes flameFlicker {
+            0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; }
+            25% { transform: scale(1.06, 0.96) rotate(2deg); opacity: 1; }
+            50% { transform: scale(0.95, 1.08) rotate(-2deg); opacity: 0.9; }
+            75% { transform: scale(1.04, 1.03) rotate(1deg); opacity: 1; }
+        }
+        .diya-flame {
+            transform-origin: bottom center;
+            animation: flameFlicker 1.8s infinite ease-in-out;
+        }
+
+        /* Pulsing Hotspot Ring */
+        @keyframes hotspotPulse {
+            0% { transform: scale(1); opacity: 0.9; }
+            70% { transform: scale(2.2); opacity: 0; }
+            100% { transform: scale(2.2); opacity: 0; }
+        }
+        .hotspot-ring::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 9999px;
+            border: 2px solid #FDE68A;
+            animation: hotspotPulse 2s infinite;
+        }
+
+        /* Bhagwa Flag Wave Effect */
+        @keyframes flagWave {
+            0%, 100% { transform: rotate(0deg) skewY(0deg) scaleX(1); }
+            25% { transform: rotate(-2deg) skewY(-6deg) scaleX(0.92); }
+            50% { transform: rotate(1deg) skewY(4deg) scaleX(0.97); }
+            75% { transform: rotate(-1deg) skewY(-4deg) scaleX(0.94); }
+        }
+        .flag-wave {
+            transform-box: fill-box;
+            transform-origin: left center;
+            animation: flagWave 1.8s infinite ease-in-out;
+        }
+        .flag-wave-delayed {
+            transform-box: fill-box;
+            transform-origin: right center;
+            animation: flagWave 2.1s infinite ease-in-out 0.4s;
+        }
+
+        /* 960x1280 Portrait & Universal JPEG Image Display Fix */
+        .fort-jpeg-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center center;
+            image-orientation: from-image;
+        }
+
+        /* Animated Voiceover Equalizer Bars */
+        @keyframes voiceBarPulse {
+            0%, 100% { transform: scaleY(0.3); }
+            50% { transform: scaleY(1); }
+        }
+        .voice-bar {
+            display: inline-block;
+            width: 3px;
+            height: 14px;
+            background-color: #FDE68A;
+            border-radius: 9999px;
+            transform-origin: bottom;
+            animation: voiceBarPulse 0.65s infinite ease-in-out;
+        }
+        .voice-bar:nth-child(2) { animation-delay: 0.15s; }
+        .voice-bar:nth-child(3) { animation-delay: 0.3s; }
+        .voice-bar:nth-child(4) { animation-delay: 0.45s; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1B130D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #57402E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF5E0E;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-bhagwa selection:text-white">
+
+    <!-- Colorful, Big-Burst Background Diwali Sky Rockets Canvas -->
+    <canvas id="sparksCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-65"></canvas>
+
+    <!-- Custom Toast Notification Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm w-full px-4 pointer-events-none"></div>
+
+    <!-- Floating Marathi Voiceover Controller Pill -->
+    <div id="voicePlayerBar" class="fixed bottom-5 left-5 z-50 hidden items-center gap-3 bg-fort-900/95 backdrop-blur-md border-2 border-bhagwa px-4 py-3 rounded-2xl shadow-2xl max-w-xs sm:max-w-sm">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-bhagwa to-amber-600 flex items-center justify-center shrink-0 shadow-md">
+            <div id="voiceWaveIndicator" class="flex items-end gap-0.5 h-4">
+                <span class="voice-bar"></span>
+                <span class="voice-bar"></span>
+                <span class="voice-bar"></span>
+                <span class="voice-bar"></span>
+            </div>
+        </div>
+        <div class="min-w-0 flex-1">
+            <span id="voiceStatusLabel" class="text-[11px] font-bold text-amber-400 block tracking-wider">🔊 माहिती सुरू आहे</span>
+            <p id="voiceActiveTitle" class="text-xs sm:text-sm font-bold text-white truncate">१. झेंडा बुरुज</p>
+        </div>
+        <button onclick="stopMarathiVoiceover()" class="px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-extrabold transition shrink-0">
+            ⏹️ थांबवा
+        </button>
+    </div>
+
+    <!-- Top Festive Marigold Garland (Toran) Accent -->
+    <div class="w-full bg-gradient-to-r from-bhagwa-dark via-amber-500 to-bhagwa-dark h-2 relative z-30"></div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-fort-950/90 backdrop-blur-md border-b border-amber-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+            <!-- Brand / Fort Emblem -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-bhagwa to-amber-600 flex items-center justify-center shadow-lg shadow-bhagwa/30 border border-amber-300/40 group-hover:scale-105 transition">
+                    <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 3v18H3V3h2zm2 0h14l-3.5 4.5L21 12H7V3z"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xs tracking-wider text-amber-400 font-semibold block">प्रतापगड निर्मिती टीम</span>
+                    <h1 class="font-heritage text-lg sm:text-xl text-white leading-tight">किल्ले प्रतापगड</h1>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-amber-100/85">
+                <a href="#fort-photos" class="hover:text-bhagwa-light transition">किल्ल्याचे फोटो</a>
+                <a href="#fort-videos" class="hover:text-bhagwa-light transition">निर्मिती व्हिडिओ</a>
+                <a href="#mud-model" class="hover:text-bhagwa-light transition">प्रतिकृतीवरील १३ ठिकाणे</a>
+                <a href="#team" class="hover:text-bhagwa-light transition">प्रतापगड निर्मिती टीम</a>
+                <a href="#history" class="hover:text-bhagwa-light transition">प्रतापगडाचा इतिहास</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Quick Jump Bar -->
+    <div class="lg:hidden bg-fort-900/95 border-b border-amber-500/20 px-3 py-2 flex items-center justify-around text-xs font-semibold text-amber-200/90 sticky top-16 z-30 backdrop-blur-md">
+        <a href="#fort-photos" class="px-2 py-1 rounded hover:bg-fort-800">फोटो</a>
+        <a href="#fort-videos" class="px-2 py-1 rounded hover:bg-fort-800">व्हिडिओ</a>
+        <a href="#mud-model" class="px-2 py-1 rounded hover:bg-fort-800">१३ ठिकाणे</a>
+        <a href="#team" class="px-2 py-1 rounded hover:bg-fort-800">निर्मिती टीम</a>
+        <a href="#history" class="px-2 py-1 rounded hover:bg-fort-800">इतिहास</a>
+    </div>
+
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section id="hero" class="relative pt-8 pb-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden z-10">
+        <!-- Radial Festive Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[420px] bg-bhagwa/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column: Heritage Title, Team Name, CTA & Stats -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    
+                    <!-- Creator Team Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fort-800/90 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-semibold shadow-lg">
+                        <span class="w-2 h-2 rounded-full bg-bhagwa animate-pulse"></span>
+                        <span id="mandalNameDisplay">प्रतापगड निर्मिती टीम</span>
+                    </div>
+
+                    <!-- Main Title -->
+                    <div class="space-y-3">
+                        <p class="text-bhagwa-light font-bold tracking-widest text-xs sm:text-sm">
+                            छत्रपती शिवाजी महाराज निर्मित रणझुंजार गिरीदुर्ग
+                        </p>
+                        <h2 class="font-heritage text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.18] drop-shadow-md">
+                            किल्ले प्रतापगड - दिवाळी मातीचा किल्ला प्रतिकृती
+                        </h2>
+                        <p class="text-base sm:text-lg text-amber-100/85 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            दिवाळीनिमित्त आमच्या <strong class="text-amber-300">प्रतापगड निर्मिती टीमने</strong> साकारलेल्या ऐतिहासिक किल्ले प्रतापगडाच्या मातीच्या प्रतिकृतीमध्ये आपले स्वागत आहे! आम्ही या किल्ल्यावर साकारलेली सर्व १३ प्रमुख ठिकाणे, गडाचा जाज्वल्य इतिहास, फोटो-व्हिडिओ आणि सर्व मावळ्यांची माहिती खालीलप्रमाणे आहे.
+                        </p>
+                    </div>
+
+                    <!-- Quick Heritage Stats Pills (100% Marathi) -->
+                    <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 pt-1">
+                        <div class="bg-fort-900/90 border border-amber-500/20 rounded-2xl p-3 text-center">
+                            <span class="block text-amber-400 font-heritage text-xl sm:text-2xl">इ.स. १६५६</span>
+                            <span class="text-xs text-amber-100/75">दुर्ग बांधणी</span>
+                        </div>
+                        <div class="bg-fort-900/90 border border-amber-500/20 rounded-2xl p-3 text-center">
+                            <span class="block text-bhagwa-light font-heritage text-xl sm:text-2xl">३,५४३ फूट</span>
+                            <span class="text-xs text-amber-100/75">समुद्रसपाटीपासून उंची</span>
+                        </div>
+                        <div class="bg-fort-900/90 border border-amber-500/20 rounded-2xl p-3 text-center">
+                            <span class="block text-amber-400 font-heritage text-xl sm:text-2xl">जावळी, सातारा</span>
+                            <span class="text-xs text-amber-100/75">सह्याद्री पर्वतरांग</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+                        <a href="#mud-model" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-bhagwa to-amber-600 hover:from-bhagwa-light hover:to-amber-500 text-white font-bold text-sm sm:text-base shadow-xl shadow-bhagwa/30 flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                            <span>प्रतिकृतीवरील १३ ठिकाणे पहा</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Festive Diya Shrine Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-gradient-to-b from-fort-800/95 to-fort-900/95 border-2 border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl text-center overflow-hidden">
+                        <!-- Corner Arch Ornaments -->
+                        <div class="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-amber-400/50 rounded-tl-3xl pointer-events-none"></div>
+                        <div class="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-amber-400/50 rounded-tr-3xl pointer-events-none"></div>
+
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold tracking-wider mb-3">
+                            दीपोत्सव मानवंदना • शिवचरणी मुजरा
+                        </span>
+                        <h3 class="font-heritage text-2xl sm:text-3xl text-white mb-2">
+                            गडावर दिवा प्रज्वलित करा
+                        </h3>
+                        <p class="text-xs sm:text-sm text-amber-100/75 mb-6">
+                            छत्रपती शिवाजी महाराजांच्या चरणी मानाचा मुजरा करण्यासाठी आणि आमच्या मातीच्या किल्ल्याचे कौतुक करण्यासाठी खालील दिव्यावर क्लिक करा!
+                        </p>
+
+                        <!-- Interactive Animated SVG Clay Diya -->
+                        <div class="relative w-44 h-44 mx-auto flex items-center justify-center my-2 cursor-pointer group" onclick="lightFestiveDiya()">
+                            <div id="diyaGlowCircle" class="absolute w-32 h-32 rounded-full bg-amber-500/40 blur-2xl transition-all duration-700 scale-90"></div>
+                            
+                            <svg class="w-36 h-36 relative z-10 overflow-visible" viewBox="0 0 120 120">
+                                <circle id="diyaAuraRing" cx="60" cy="40" r="28" fill="url(#flameRadial)" class="transition-opacity duration-500 opacity-80" />
+                                <defs>
+                                    <radialGradient id="flameRadial">
+                                        <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.9"/>
+                                        <stop offset="60%" stop-color="#FF5E0E" stop-opacity="0.4"/>
+                                        <stop offset="100%" stop-color="#FF5E0E" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <linearGradient id="clayGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#B45309"/>
+                                        <stop offset="50%" stop-color="#78350F"/>
+                                        <stop offset="100%" stop-color="#451A03"/>
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- Flickering Flame Group -->
+                                <g id="diyaFlameGroup" class="diya-flame">
+                                    <path d="M60 12 C60 12 44 34 48 48 C51 57 69 57 72 48 C76 34 60 12 60 12 Z" fill="#FF5E0E"/>
+                                    <path d="M60 20 C60 20 50 36 53 47 C55 53 65 53 67 47 C70 36 60 20 60 20 Z" fill="#FBBF24"/>
+                                    <ellipse cx="60" cy="46" rx="4" ry="7" fill="#FEF3C7"/>
+                                </g>
+
+                                <!-- Cotton Wick (वात) -->
+                                <path d="M58 56 Q60 50 62 56" stroke="#FDE68A" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+                                <!-- Traditional Terracotta Clay Bowl (पणती) -->
+                                <path d="M20 62 Q60 72 100 62 C96 90 80 102 60 102 C40 102 24 90 20 62 Z" fill="url(#clayGrad)" stroke="#F59E0B" stroke-width="2"/>
+                                <path d="M26 67 Q60 76 94 67" stroke="#FBBF24" stroke-width="2.5" stroke-dasharray="4 6" fill="none"/>
+                                <ellipse cx="60" cy="103" rx="22" ry="5" fill="#78350F" stroke="#D97706" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+
+                        <!-- Light a Diya CTA Button -->
+                        <button onclick="lightFestiveDiya()" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-bhagwa to-amber-600 hover:from-amber-400 hover:to-bhagwa text-white font-extrabold text-base shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+                            <span>🪔</span>
+                            <span>दिवा प्रज्वलित करा</span>
+                        </button>
+
+                        <!-- Live Blessing Counter -->
+                        <div class="mt-4 pt-4 border-t border-amber-500/20 flex items-center justify-between text-xs sm:text-sm">
+                            <span class="text-amber-200/80">आतापर्यंत प्रज्वलित केलेले दिवे:</span>
+                            <span id="diyaCounterDisplay" class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 font-extrabold text-base">५९ 🪔</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="battlement-border"></div>
+
+    <!-- ==================== 2. LARGE AUTO-SLIDING FINAL FORT PHOTOS SECTION ==================== -->
+    <section id="fort-photos" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fort-950 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-bhagwa-light font-bold tracking-widest text-xs sm:text-sm block mb-1">
+                        प्रत्यक्ष किल्ला दर्शन • भव्य छायाचित्रे (९६० × १२८० पोर्ट्रेट व लँडस्केप)
+                    </span>
+                    <h2 class="font-heritage text-3xl sm:text-5xl text-white">
+                        आमच्या किल्ले प्रतापगड प्रतिकृतीचे भव्य फोटो
+                    </h2>
+                    <p class="text-sm sm:text-base text-amber-100/75 mt-1">
+                        प्रतापगड निर्मिती टीमने साकारलेल्या संपूर्ण किल्ल्याची विविध कोनातून घेतलेली छायाचित्रे.
+                    </p>
+                </div>
+
+                <!-- Slide Counter & Manual Prev/Next Buttons -->
+                <div class="flex items-center gap-3 self-start md:self-auto">
+                    <span id="fortSlideCounter" class="px-3.5 py-1.5 rounded-xl bg-fort-900 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-extrabold">
+                        १ / ६
+                    </span>
+                    <button onclick="prevFortSlide()" class="w-11 h-11 rounded-2xl bg-fort-800 hover:bg-bhagwa border border-amber-500/40 text-white flex items-center justify-center shadow-lg transition" title="मागील फोटो">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button onclick="nextFortSlide()" class="w-11 h-11 rounded-2xl bg-fort-800 hover:bg-bhagwa border border-amber-500/40 text-white flex items-center justify-center shadow-lg transition" title="पुढील फोटो">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Large Auto-Sliding Carousel Viewport Specifically Sized for 960x1280 Portrait & 1280x960 Landscape JPEG Photos -->
+            <div id="fortCarouselViewport" class="relative w-full h-[520px] sm:h-[640px] lg:h-[720px] rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-fort-950 group select-none">
+                
+                <!-- Horizontal Sliding Track (Inline HTML Slides: Paste your photo filename or path in src="" below) -->
+                <div id="fortCarouselTrack" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+                    
+                    <!-- ==================== SLIDE 1: PASTE PHOTO 1 URL IN src="" BELOW ==================== -->
+                    <div class="fort-carousel-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex items-center justify-center">
+                        <!-- PASTE SLIDE 1 PHOTO URL IN src="" (Supports 960x1280 Portrait & 300KB+ JPEG) -->
+                        <img src="photos/photo1.jpeg"
+                             width="960" height="1280"
+                             alt="पूर्ण झालेल्या किल्ले प्रतापगड प्रतिकृतीचे विहंगम दृश्य"
+                             class="fort-jpeg-img relative z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+                        <div class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/65 to-transparent p-5 sm:p-8 pt-14 pointer-events-none">
+                            <span class="inline-block px-3 py-1 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-2 shadow">छायाचित्र क्र. १</span>
+                            <h3 class="font-heritage text-xl sm:text-3xl text-white">पूर्ण झालेल्या किल्ले प्रतापगड प्रतिकृतीचे विहंगम दृश्य</h3>
+                            <p class="text-xs sm:text-sm text-amber-200/90 mt-1">दुहेरी तटबंदी, बुरुज, भगवे ध्वज आणि हिरव्यागार उतारासह संपूर्ण किल्ले प्रतापगड प्रतिकृती</p>
+                        </div>
+                    </div>
+
+                    <!-- ==================== SLIDE 2: PASTE PHOTO 2 URL IN src="" BELOW ==================== -->
+                    <div class="fort-carousel-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex items-center justify-center">
+                        <!-- PASTE SLIDE 2 PHOTO URL IN src="" -->
+                        <img src="photos/photo2.jpeg"
+                             width="960" height="1280"
+                             alt="झेंडा बुरुज आणि पाषाण पायऱ्या"
+                             class="fort-jpeg-img relative z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+                        <div class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/65 to-transparent p-5 sm:p-8 pt-14 pointer-events-none">
+                            <span class="inline-block px-3 py-1 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-2 shadow">छायाचित्र क्र. २</span>
+                            <h3 class="font-heritage text-xl sm:text-3xl text-white">झेंडा बुरुज, पाषाण पायऱ्या आणि डौलाने फडकणारा भगवा ध्वज</h3>
+                            <p class="text-xs sm:text-sm text-amber-200/90 mt-1">किल्ल्याच्या सर्वोच्च टोकावरील मजबूत बुरुज आणि दगडी तटबंदीची रचना</p>
+                        </div>
+                    </div>
+
+                    <!-- ==================== SLIDE 3: PASTE PHOTO 3 URL IN src="" BELOW ==================== -->
+                    <div class="fort-carousel-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex items-center justify-center">
+                        <!-- PASTE SLIDE 3 PHOTO URL IN src="" -->
+                        <img src="photos/photo3.jpeg"
+                             width="960" height="1280"
+                             alt="छत्रपती शिवाजी महाराज स्मारक आणि प्रतापगड विश्रामधाम"
+                             class="fort-jpeg-img relative z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+                        <div class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/65 to-transparent p-5 sm:p-8 pt-14 pointer-events-none">
+                            <span class="inline-block px-3 py-1 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-2 shadow">छायाचित्र क्र. ३</span>
+                            <h3 class="font-heritage text-xl sm:text-3xl text-white">छत्रपती शिवाजी महाराज स्मारक आणि प्रतापगड विश्रामधाम</h3>
+                            <p class="text-xs sm:text-sm text-amber-200/90 mt-1">बालेकिल्ल्याच्या पठारावरील मध्यवर्ती स्मारक, कौलारू विश्रामधाम आणि यशवंत बुरुज</p>
+                        </div>
+                    </div>
+
+                    <!-- ==================== SLIDE 4: PASTE PHOTO 4 URL IN src="" BELOW ==================== -->
+                    <div class="fort-carousel-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex items-center justify-center">
+                        <!-- PASTE SLIDE 4 PHOTO URL IN src="" -->
+                        <img src="photos/photo4.jpeg"
+                             width="960" height="1280"
+                             alt="बालेकिल्ला द्वार आणि गोडे तलाव"
+                             class="fort-jpeg-img relative z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+                        <div class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/65 to-transparent p-5 sm:p-8 pt-14 pointer-events-none">
+                            <span class="inline-block px-3 py-1 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-2 shadow">छायाचित्र क्र. ४</span>
+                            <h3 class="font-heritage text-xl sm:text-3xl text-white">बालेकिल्ला द्वार, गोडे तलाव आणि चोर दरवाजा</h3>
+                            <p class="text-xs sm:text-sm text-amber-200/90 mt-1">भव्य कमान असलेले बालेकिल्ला द्वार, अंकुरलेली हिरवळ आणि तटबंदीतील चोर दरवाजा</p>
+                        </div>
+                    </div>
+
+                    <!-- ==================== SLIDE 5: PASTE PHOTO 5 URL IN src="" BELOW ==================== -->
+                    <div class="fort-carousel-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex items-center justify-center">
+                        <!-- PASTE SLIDE 5 PHOTO URL IN src="" -->
+                        <img src="photos/photo5.jpeg"
+                             width="960" height="1280"
+                             alt="रेडका बुरुज आणि भोरप्या डोंगराचा कडा"
+                             class="fort-jpeg-img relative z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+                        <div class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/65 to-transparent p-5 sm:p-8 pt-14 pointer-events-none">
+                            <span class="inline-block px-3 py-1 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-2 shadow">छायाचित्र क्र. ५</span>
+                            <h3 class="font-heritage text-xl sm:text-3xl text-white">रेडका बुरुज आणि भोरप्या डोंगराचा हिरवागार कडा</h3>
+                            <p class="text-xs sm:text-sm text-amber-200/90 mt-1">समोरून दिसणारी अभेद्य काळी-पांढरी तटबंदी आणि गडावरील भगवे ध्वज</p>
+                        </div>
+                    </div>
+
+                    <!-- ==================== SLIDE 6: PASTE PHOTO 6 URL IN src="" BELOW ==================== -->
+                    <div class="fort-carousel-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex items-center justify-center">
+                        <!-- PASTE SLIDE 6 PHOTO URL IN src="" -->
+                        <img src="photos/photo6.jpeg"
+                             width="960" height="1280"
+                             alt="श्री भवानी माता मंदिर आणि मुख्य प्रवेशद्वार"
+                             class="fort-jpeg-img relative z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+                        <div class="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/65 to-transparent p-5 sm:p-8 pt-14 pointer-events-none">
+                            <span class="inline-block px-3 py-1 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-2 shadow">छायाचित्र क्र. ६</span>
+                            <h3 class="font-heritage text-xl sm:text-3xl text-white">श्री भवानी माता मंदिर, भवानी तलाव आणि मुख्य प्रवेशद्वार</h3>
+                            <p class="text-xs sm:text-sm text-amber-200/90 mt-1">सोन्यासारख्या पिवळ्या रंगातील श्री भवानी माता मंदिर, शेजारील भवानी तलाव आणि पालखी मार्ग</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Left / Right Floating Overlay Arrows -->
+                <button onclick="prevFortSlide()" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/60 hover:bg-bhagwa text-white border border-amber-300/40 flex items-center justify-center shadow-xl transition opacity-90 group-hover:opacity-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button onclick="nextFortSlide()" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/60 hover:bg-bhagwa text-white border border-amber-300/40 flex items-center justify-center shadow-xl transition opacity-90 group-hover:opacity-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <!-- Slide Dots / Thumbnails Bar -->
+            <div id="fortCarouselDots" class="flex flex-wrap items-center justify-center gap-2.5 mt-5"></div>
+
+        </div>
+    </section>
+
+    <div class="battlement-border"></div>
+
+    <!-- ==================== 3. FORT MAKING & TRANSITION VIDEO SLIDING SECTION (3 VIDEOS) ==================== -->
+    <section id="fort-videos" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fort-900 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-bhagwa-light font-bold tracking-widest text-xs sm:text-sm block mb-1">
+                        प्रत्यक्ष किल्ला उभारणी • ट्रांझिशन आणि मावळ्यांची मेहनत (एकूण ३ व्हिडिओ)
+                    </span>
+                    <h2 class="font-heritage text-3xl sm:text-5xl text-white">
+                        किल्ले प्रतापगड निर्मितीचा प्रवास आणि मेहनतीचे व्हिडिओ
+                    </h2>
+                    <p class="text-sm sm:text-base text-amber-100/75 mt-1">
+                        १ ला व्हिडिओ किल्ल्याच्या सुरुवातीपासून पूर्णत्वापर्यंतच्या प्रवासाचा (Transition) आहे, तर २ रा आणि ३ रा व्हिडिओ सर्व सदस्यांनी घेतलेल्या प्रत्यक्ष मेहनतीचा आहे.
+                    </p>
+                </div>
+
+                <!-- Video Slide Counter & Manual Prev/Next Buttons -->
+                <div class="flex items-center gap-3 self-start md:self-auto">
+                    <span id="fortVideoSlideCounter" class="px-3.5 py-1.5 rounded-xl bg-fort-950 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-extrabold">
+                        १ / ३
+                    </span>
+                    <button onclick="prevFortVideoSlide()" class="w-11 h-11 rounded-2xl bg-fort-800 hover:bg-bhagwa border border-amber-500/40 text-white flex items-center justify-center shadow-lg transition" title="मागील व्हिडिओ">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button onclick="nextFortVideoSlide()" class="w-11 h-11 rounded-2xl bg-fort-800 hover:bg-bhagwa border border-amber-500/40 text-white flex items-center justify-center shadow-lg transition" title="पुढील व्हिडिओ">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Video Selector Pills -->
+            <div class="flex flex-wrap gap-2.5 mb-5">
+                <button onclick="goToFortVideoSlide(0)" id="video-pill-0" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-bhagwa text-white shadow-lg border border-amber-200">
+                    🎬 १. सुरुवातीपासून पूर्णत्वापर्यंत (Transition Video)
+                </button>
+                <button onclick="goToFortVideoSlide(1)" id="video-pill-1" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-fort-950 text-amber-200/85 hover:bg-fort-800 border border-amber-500/30">
+                    ⚒️ २. किल्ला निर्मिती व मेहनत (भाग १)
+                </button>
+                <button onclick="goToFortVideoSlide(2)" id="video-pill-2" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-fort-950 text-amber-200/85 hover:bg-fort-800 border border-amber-500/30">
+                    🧱 ३. किल्ला निर्मिती व मेहनत (भाग २)
+                </button>
+            </div>
+
+            <!-- Large Video Sliding Viewport (Supports Portrait & Landscape Videos) -->
+            <div id="fortVideoCarouselViewport" class="relative w-full max-w-md mx-auto aspect-[9/16] sm:aspect-[9/16] rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-fort-950 group select-none">
+                
+                <!-- Horizontal Video Sliding Track -->
+                <div id="fortVideoCarouselTrack" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+                    
+                    <!-- ==================== VIDEO SLIDE 1: TRANSITION VIDEO (START TILL COMPLETE) ==================== -->
+                    <div class="fort-video-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex flex-col justify-between">
+                        <div class="relative flex-1 w-full overflow-hidden flex items-center justify-center bg-black">
+                            <!-- Decorative Backdrop if Video isn't loaded yet -->
+                            
+
+                            <!-- PASTE VIDEO 1 PATH IN src="" BELOW (e.g., videos/video1.mp4) -->
+                            <video src="photos/video1.mp4"
+                                   controls
+                                   playsinline
+                                   preload="metadata"
+                                   class="fort-video-player w-full h-full object-cover bg-black"
+                                तुमचा ब्राऊझर व्हिडिओला सपोर्ट करत नाही.
+                            </video>
+                        </div>
+
+                        <!-- Bottom Video Info Bar -->
+                        <div class="bg-fort-950/95 border-t border-amber-500/30 p-4 sm:p-6 z-20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-3 py-0.5 rounded-full bg-bhagwa text-white text-xs font-extrabold mb-1 shadow">
+                                    व्हिडिओ क्र. १ • ट्रांझिशन व्हिडिओ (Transition)
+                                </span>
+                                <h3 class="font-heritage text-lg sm:text-2xl text-white">
+                                    मातीच्या पहिल्या थरापासून ते पूर्ण झालेल्या किल्ले प्रतापगडापर्यंतचा प्रवास
+                                </h3>
+                                <p class="text-xs sm:text-sm text-amber-200/85">
+                                    किल्ल्याची पायाभरणी, तटबंदी आणि पूर्ण सजलेला किल्ला असा सुरुवातीपासून शेवटपर्यंतच्या फोटोंचा एकत्रित प्रवास.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== VIDEO SLIDE 2: MAKING & MEHNAT VIDEO (PART 1) ==================== -->
+                    <div class="fort-video-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex flex-col justify-between">
+                        <div class="relative flex-1 w-full overflow-hidden flex items-center justify-center bg-black">
+                            <!-- Decorative Backdrop if Video isn't loaded yet -->
+                           
+
+                            <!-- PASTE VIDEO 2 PATH IN src="" BELOW (e.g., videos/video2.mp4) -->
+                            <video src="photos/video2.mp4"
+                                   controls
+                                   playsinline
+                                   preload="metadata"
+                                   class="fort-video-player w-full h-full object-cover bg-black"
+                                तुमचा ब्राऊझर व्हिडिओला सपोर्ट करत नाही.
+                            </video>
+                        </div>
+
+                        <!-- Bottom Video Info Bar -->
+                        <div class="bg-fort-950/95 border-t border-amber-500/30 p-4 sm:p-6 z-20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-3 py-0.5 rounded-full bg-amber-600 text-white text-xs font-extrabold mb-1 shadow">
+                                    व्हिडिओ क्र. २ • प्रत्यक्ष किल्ला निर्मिती व मेहनत (भाग १)
+                                </span>
+                                <h3 class="font-heritage text-lg sm:text-2xl text-white">
+                                    प्रतापगड निर्मिती टीमची एकजूट आणि किल्ला उभारणीची मेहनत
+                                </h3>
+                                <p class="text-xs sm:text-sm text-amber-200/85">
+                                    दगड-माती गोळा करण्यापासून ते डोंगर व बुरुज उभारताना सर्व सहकाऱ्यांनी केलेले परिश्रम.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== VIDEO SLIDE 3: MAKING & MEHNAT VIDEO (PART 2) ==================== -->
+                    <div class="fort-video-slide w-full h-full shrink-0 relative bg-fort-950 overflow-hidden flex flex-col justify-between">
+                        <div class="relative flex-1 w-full overflow-hidden flex items-center justify-center bg-black">
+                            <!-- Decorative Backdrop if Video isn't loaded yet -->
+                            
+
+                            <!-- PASTE VIDEO 3 PATH IN src="" BELOW (e.g., videos/video3.mp4) -->
+                            <video src="photos/video3.mp4"
+                                   controls
+                                   playsinline
+                                   preload="metadata"
+                                   class="fort-video-player w-full h-full object-cover bg-black"
+                                तुमचा ब्राऊझर व्हिडिओला सपोर्ट करत नाही.
+                            </video>
+                        </div>
+
+                        <!-- Bottom Video Info Bar -->
+                        <div class="bg-fort-950/95 border-t border-amber-500/30 p-4 sm:p-6 z-20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-3 py-0.5 rounded-full bg-amber-600 text-white text-xs font-extrabold mb-1 shadow">
+                                    व्हिडिओ क्र. ३ • प्रत्यक्ष किल्ला निर्मिती व मेहनत (भाग २)
+                                </span>
+                                <h3 class="font-heritage text-lg sm:text-2xl text-white">
+                                    तटबंदीची आखणी, रंगकाम आणि १३ ऐतिहासिक ठिकाणांची निर्मिती
+                                </h3>
+                                <p class="text-xs sm:text-sm text-amber-200/85">
+                                    प्रत्येक बुरुज, मंदिर, दरवाजे आणि किल्ल्याचे बारकावे साकारताना टीममधील सदस्यांनी घेतलेली मेहनत.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Left / Right Floating Overlay Arrows for Video Carousel -->
+                <button onclick="prevFortVideoSlide()" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/65 hover:bg-bhagwa text-white border border-amber-300/40 flex items-center justify-center shadow-xl transition opacity-90 group-hover:opacity-100" title="मागील व्हिडिओ">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button onclick="nextFortVideoSlide()" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/65 hover:bg-bhagwa text-white border border-amber-300/40 flex items-center justify-center shadow-xl transition opacity-90 group-hover:opacity-100" title="पुढील व्हिडिओ">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <!-- Video Slide Dots Bar -->
+            <div id="fortVideoCarouselDots" class="flex flex-wrap items-center justify-center gap-2.5 mt-5"></div>
+
+        </div>
+    </section>
+
+    <div class="battlement-border"></div>
+
+    <!-- ==================== 4. INTERACTIVE MUD MODEL HOTSPOT EXPLORER (ALL 13 PLACES) ==================== -->
+    <section id="mud-model" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fort-950 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-bhagwa-light font-bold tracking-widest text-xs sm:text-sm block mb-1">
+                        प्रत्यक्ष प्रतिकृती दर्शन • एकूण १३ प्रमुख ठिकाणे
+                    </span>
+                    <h2 class="font-heritage text-3xl sm:text-5xl text-white">
+                        मातीच्या प्रतापगडावरील १३ प्रमुख ठिकाणे
+                    </h2>
+                    <p class="text-sm sm:text-base text-amber-100/75 mt-1">
+                        नकाशावरील १ ते १३ क्रमांकांवर क्लिक करा आणि त्या ठिकाणाची संपूर्ण माहिती ऐका व वाचा.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Interactive Map + Detail Panel Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left 7 Cols: Interactive Mud Model Map with Full Fort Illustration + Photo Placeholder -->
+                <div class="lg:col-span-7">
+                    <div id="mudModelContainer" class="relative rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-fort-950 w-full h-[420px] sm:h-[520px] lg:h-[560px] select-none flex items-center justify-center">
+                        
+                        <!-- 
+                            ===========================================================================
+                            MAIN INTERACTIVE FORT PHOTO PLACEHOLDER (Supports 960x1280 JPEG & all sizes):
+                            Paste your photo file name or path inside data-photo-src="" or src="" below.
+                            ===========================================================================
+                        -->
+                        <img id="actualFortPhoto"
+                             src="image_f3678c.jpg"
+                             data-fallback-src="image_f3678c.jpg"
+                             width="960"
+                             height="1280"
+                             alt="प्रतापगड निर्मिती टीम - मातीचा किल्ला प्रतिकृती"
+                             class="fort-jpeg-img absolute inset-0 w-full h-full z-10 opacity-0 transition-opacity duration-300"
+                             onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');"
+                             onerror="handleSmartJpegError(this)">
+
+                        <!-- Full-Color 3D Isometric Pratapgad Mud Fort Model with Animated Waving Bhagwa Flags -->
+                        <svg class="w-full h-full object-cover z-0" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Warm Sandy Courtyard Ground -->
+                            <rect width="800" height="600" fill="#B69B7D"/>
+                            <ellipse cx="400" cy="300" rx="390" ry="280" fill="#9E8264" opacity="0.55"/>
+                            <!-- Neon Green Base Slopes -->
+                            <path d="M195 145 C180 190 250 220 285 240 C265 280 280 325 320 350 C310 420 315 470 430 515 C525 555 585 595 635 585 C675 565 695 450 680 365 C655 300 610 265 555 245 C565 200 545 155 520 145 C470 140 425 170 390 175 C330 165 265 110 195 145 Z" fill="#2CE61B" opacity="0.75"/>
+                            <!-- Dark Red/Brown Soil Body of Fort -->
+                            <path d="M210 135 C200 175 265 205 305 225 C280 265 295 305 335 330 C325 395 330 440 440 485 C530 520 580 560 620 545 C660 520 680 420 665 345 C640 285 595 255 540 235 C550 190 535 150 510 140 C465 135 420 165 385 170 C330 155 265 105 210 135 Z" fill="#3D261A" stroke="#1E140F" stroke-width="6"/>
+                            <!-- Outer Black Stone Ramparts with White Masonry Lines -->
+                            <path d="M215 130 L275 180 L360 190 L300 230 C285 260 315 290 360 275 L340 355 L345 405 L580 490 L615 510 L670 355 L600 260 L545 235 L535 150 L420 175" fill="none" stroke="#1C1C1C" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+                            <path d="M215 130 L275 180 L360 190 L300 230 C285 260 315 290 360 275 L340 355 L345 405 L580 490 L615 510 L670 355 L600 260 L545 235 L535 150 L420 175" fill="none" stroke="#EAEAEA" stroke-width="18" stroke-dasharray="4 14" stroke-linejoin="round"/>
+                            <!-- Inner Dividing Wall / Palkhi Marg -->
+                            <path d="M530 190 C490 210 450 215 430 220 C465 250 495 265 480 285 C440 300 390 335 390 385" fill="none" stroke="#222222" stroke-width="12" stroke-linecap="round"/>
+                            <path d="M530 190 C490 210 450 215 430 220 C465 250 495 265 480 285 C440 300 390 335 390 385" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-dasharray="3 10"/>
+                            <!-- Main Entrance Archway (Mukhya Praveshdwar) -->
+                            <g transform="translate(370, 145)">
+                                <rect x="0" y="0" width="34" height="44" rx="3" fill="#1C1C1C" stroke="#FFFFFF" stroke-width="2"/>
+                                <path d="M8 44 L8 18 Q17 8 26 18 L26 44 Z" fill="#9E8264"/>
+                            </g>
+                            <!-- Yellow Shree Bhavani Mata Mandir -->
+                            <g transform="translate(470, 148)">
+                                <rect x="0" y="14" width="38" height="20" fill="#181818" stroke="#F59E0B" stroke-width="1.5"/>
+                                <polygon points="-4,14 42,14 36,4 4,4" fill="#FACC15" stroke="#CA8A04" stroke-width="1.5"/>
+                                <polygon points="16,8 22,8 19,-6" fill="#FF6B00" class="flag-wave"/>
+                            </g>
+                            <!-- Twin Terracotta-Roofed Structures (Pratapgad Vishramdham) -->
+                            <g transform="translate(450, 238)">
+                                <polygon points="0,18 16,0 30,12 14,28" fill="#C85A32" stroke="#7C2D12" stroke-width="1.5"/>
+                            </g>
+                            <g transform="translate(585, 345)">
+                                <polygon points="0,24 26,0 48,18 22,42" fill="#C85A32" stroke="#7C2D12" stroke-width="1.5"/>
+                            </g>
+                            <!-- Central Black Monument (Chhatrapati Shivaji Maharaj Smarak) -->
+                            <g transform="translate(490, 285)">
+                                <polygon points="0,42 46,42 38,28 8,28" fill="#262626" stroke="#E5E5E5" stroke-width="2"/>
+                                <rect x="12" y="4" width="22" height="26" rx="4" fill="#171717" stroke="#404040" stroke-width="1.5"/>
+                            </g>
+                            <!-- 4 Animated Waving Maratha Bhagwa Flags on Bastions -->
+                            <g transform="translate(245, 50)">
+                                <line x1="0" y1="70" x2="-6" y2="0" stroke="#F5F5F5" stroke-width="3"/>
+                                <polygon points="-6,0 28,8 14,17 26,26 -4,28" fill="#FF4500" class="flag-wave"/>
+                            </g>
+                            <g transform="translate(528, 95)">
+                                <line x1="0" y1="52" x2="2" y2="0" stroke="#F5F5F5" stroke-width="2.5"/>
+                                <polygon points="2,0 -32,7 -18,15 -30,23 1,25" fill="#FF5E0E" class="flag-wave-delayed"/>
+                            </g>
+                            <g transform="translate(575, 188)">
+                                <line x1="0" y1="60" x2="2" y2="0" stroke="#F5F5F5" stroke-width="2.5"/>
+                                <polygon points="2,0 36,9 20,18 34,27 2,29" fill="#FF3B00" class="flag-wave"/>
+                            </g>
+                            <g transform="translate(588, 360)">
+                                <line x1="0" y1="72" x2="6" y2="0" stroke="#F5F5F5" stroke-width="3"/>
+                                <polygon points="6,0 48,10 30,21 44,32 4,34" fill="#FF4500" class="flag-wave"/>
+                            </g>
+                        </svg>
+
+                        <!-- Interactive Numbered Hotspot Buttons (१ to १३) Mapped to User's Actual Fort Photo -->
+                        <button onclick="selectHotspot(1)" id="marker-1" style="left: 65%; top: 20%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-bhagwa text-white font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-white hover:scale-110 transition z-20" title="१. झेंडा बुरुज">१</button>
+
+                        <button onclick="selectHotspot(2)" id="marker-2" style="left: 52%; top: 27%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="२. भवानी तलाव">२</button>
+
+                        <button onclick="selectHotspot(3)" id="marker-3" style="left: 61%; top: 28%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="३. श्री भवानी माता मंदिर">३</button>
+
+                        <button onclick="selectHotspot(4)" id="marker-4" style="left: 30%; top: 20%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="४. केदार बुरुज">४</button>
+
+                        <button onclick="selectHotspot(5)" id="marker-5" style="left: 41%; top: 41%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="५. रेडका बुरुज">५</button>
+
+                        <button onclick="selectHotspot(6)" id="marker-6" style="left: 45%; top: 58%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="६. चोर दरवाजा">६</button>
+
+                        <button onclick="selectHotspot(7)" id="marker-7" style="left: 72%; top: 39%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="७. यशवंत बुरुज">७</button>
+
+                        <button onclick="selectHotspot(8)" id="marker-8" style="left: 74%; top: 53%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="८. गोडे तलाव">८</button>
+
+                        <button onclick="selectHotspot(9)" id="marker-9" style="left: 49%; top: 28%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="९. मुख्य प्रवेशद्वार">९</button>
+
+                        <button onclick="selectHotspot(10)" id="marker-10" style="left: 57%; top: 32%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="१०. बालेकिल्ला द्वार">१०</button>
+
+                        <button onclick="selectHotspot(11)" id="marker-11" style="left: 53%; top: 47%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="११. पालखी मार्ग">११</button>
+
+                        <button onclick="selectHotspot(12)" id="marker-12" style="left: 76%; top: 61%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="१२. प्रतापगड विश्रामधाम">१२</button>
+
+                        <button onclick="selectHotspot(13)" id="marker-13" style="left: 64%; top: 51%;" class="hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-amber-400 hover:scale-110 transition z-20" title="१३. छत्रपती शिवाजी महाराज स्मारक">१३</button>
+
+                        <!-- Bottom Floating Instruction Overlay -->
+                        <div class="absolute bottom-3 left-3 right-3 bg-black/75 backdrop-blur-md border border-amber-500/30 rounded-2xl px-4 py-2 flex items-center justify-between text-xs text-amber-200 z-20">
+                            <span id="mapInstructionLabel">👆 किल्ल्याच्या फोटोवरील कोणत्याही क्रमांकावर (१ ते १३) क्लिक करून माहिती ऐका व वाचा</span>
+                            <span class="font-bold text-amber-400">एकूण १३ ठिकाणे</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Pill Selector Bar Below Map (All 13 Places) -->
+                    <div id="hotspotPillsBar" class="flex flex-wrap gap-2 mt-4"></div>
+                </div>
+
+                <!-- Right 5 Cols: Active Hotspot Details Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-fort-950 border-2 border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-5 relative overflow-hidden">
+                        <div class="flex items-center justify-between">
+                            <span id="spotBadge" class="px-3 py-1 rounded-full bg-bhagwa/20 border border-bhagwa/50 text-bhagwa-light text-xs font-extrabold tracking-wider">
+                                ठिकाण क्र. १ • किल्ले प्रतापगड प्रतिकृती
+                            </span>
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="prevHotspot()" class="w-8 h-8 rounded-lg bg-fort-800 hover:bg-fort-700 border border-amber-500/30 flex items-center justify-center text-amber-300" title="मागील ठिकाण">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                                </button>
+                                <button onclick="nextHotspot()" class="w-8 h-8 rounded-lg bg-fort-800 hover:bg-fort-700 border border-amber-500/30 flex items-center justify-center text-amber-300" title="पुढील ठिकाण">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 id="spotTitle" class="font-heritage text-2xl sm:text-3xl text-white">
+                                १. झेंडा बुरुज
+                            </h3>
+                            <!-- Voiceover Play / Stop Button -->
+                            <div class="mt-3 flex flex-wrap items-center gap-2">
+                                <button id="spotVoiceBtn" onclick="speakCurrentHotspot()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-bhagwa to-amber-600 hover:from-bhagwa-light hover:to-amber-500 text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-bhagwa/25 flex items-center gap-2 transition active:scale-95">
+                                    <span>🔊 माहिती ऐका</span>
+                                </button>
+                                <span id="spotVoiceSubtext" class="text-[11px] text-amber-300/80 font-semibold">ठिकाणावर क्लिक करताच माहिती ऐकू येते</span>
+                            </div>
+                        </div>
+
+                        <!-- Historical Importance Box -->
+                        <div class="bg-fort-900/90 border border-amber-500/20 rounded-2xl p-4 space-y-1.5">
+                            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold tracking-wider">
+                                <span>⚔️</span>
+                                <span>ऐतिहासिक महत्त्व</span>
+                            </div>
+                            <p id="spotHistoryText" class="text-xs sm:text-sm text-amber-100/85 leading-relaxed">
+                                बालेकिल्ल्याच्या ईशान्य कोपऱ्यात असलेला झेंडा बुरुज हा प्रतापगडावरील सर्वोच्च व अत्यंत महत्त्वाचा बुरुज आहे. येथून संपूर्ण जावळीच्या खोऱ्यावर व महाबळेश्वर पठारावर लक्ष ठेवता येत असे आणि याच बुरुजावर स्वराज्याचा अस्मितादर्शक भगवा ध्वज दिमाखात फडकत असे.
+                            </p>
+                        </div>
+
+                        <!-- Mud Fort Craftsmanship Box -->
+                        <div class="bg-gradient-to-br from-bhagwa/15 to-amber-600/10 border border-bhagwa/40 rounded-2xl p-4 space-y-1.5">
+                            <div class="flex items-center gap-2 text-bhagwa-light text-xs font-bold tracking-wider">
+                                <span>🧱</span>
+                                <span>आम्ही ही प्रतिकृती कशी साकारली</span>
+                            </div>
+                            <p id="spotCraftText" class="text-xs sm:text-sm text-amber-100/90 leading-relaxed">
+                                आमच्या मातीच्या किल्ल्यावर बालेकिल्ल्याच्या उजव्या सर्वोच्च टोकावर दगड व लाल मातीने उंच गोलाकार झेंडा बुरुज घडवून त्यावर मोठा भगवा ध्वज फडकवला आहे.
+                            </p>
+                        </div>
+
+                        <!-- Materials Used Tags -->
+                        <div class="pt-1">
+                            <span class="block text-xs text-amber-300/70 mb-2 font-semibold">या भागासाठी वापरलेले साहित्य:</span>
+                            <div id="spotMaterialsTags" class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg bg-fort-900 border border-amber-500/30 text-amber-300 text-xs font-semibold">लाल माती</span>
+                                <span class="px-3 py-1 rounded-lg bg-fort-900 border border-amber-500/30 text-amber-300 text-xs font-semibold">दगडी पाया</span>
+                                <span class="px-3 py-1 rounded-lg bg-fort-900 border border-amber-500/30 text-amber-300 text-xs font-semibold">उंच भगवा ध्वज</span>
+                                <span class="px-3 py-1 rounded-lg bg-fort-900 border border-amber-500/30 text-amber-300 text-xs font-semibold">बुरुज चर्या</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="battlement-border"></div>
+
+   <!-- ==================== 5. TEAM ==================== -->
+<section id="team" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fort-900 relative z-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-10">
+            <span class="text-bhagwa-light font-bold tracking-widest text-xs sm:text-sm block mb-1">
+                प्रतापगड निर्मिती टीम • एकजूट आणि समान सहभाग
+            </span>
+            <h2 class="font-heritage text-3xl sm:text-4xl text-white">प्रतापगड निर्मिती टीम</h2>
+            <p class="text-sm sm:text-base text-amber-100/75 mt-1">
+                प्रत्येक सदस्याच्या समान कष्टातून, कल्पकतेतून आणि एकजुटीतून ही भव्य किल्ले प्रतापगडाची प्रतिकृती साकारली आहे.
+            </p>
+        </div>
+        <div id="teamGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </div>
+</section>
+
+<div class="battlement-border"></div>
+
+<!-- ==================== 6. HISTORY ==================== -->
+<section id="history" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fort-950 relative z-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+            <span class="text-bhagwa-light font-bold tracking-widest text-xs sm:text-sm block">
+                शिवकालीन सुवर्ण इतिहास • हिंदवी स्वराज्य
+            </span>
+            <h2 class="font-heritage text-3xl sm:text-5xl text-white">किल्ले प्रतापगडाचा रणझुंजार इतिहास</h2>
+            <p class="text-sm sm:text-base text-amber-100/75">
+                इ.स. १६५६ मधील जावळीच्या खोऱ्यातील दुर्ग उभारणीपासून ते १० नोव्हेंबर १६५९ च्या ऐतिहासिक पराक्रमापर्यंतचा जाज्वल्य प्रवास. <strong class="text-amber-300">(कोणत्याही कार्डावर क्लिक करून माहिती ऐका 🔊)</strong>
+            </p>
+        </div>
+
+        <div id="historyTimelineGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"></div>
+
+        <div onclick="speakArchitectureBanner()" id="architectureHistoryCard" class="mt-12 cursor-pointer bg-gradient-to-r from-fort-900 via-fort-800 to-fort-900 border-2 border-amber-500/30 hover:border-bhagwa rounded-3xl p-6 sm:p-10 shadow-2xl transition group">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-8 space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold tracking-wider">दुर्ग स्थापत्यशास्त्र • अभेद्य रचना</span>
+                        <span class="px-3 py-1 rounded-full bg-bhagwa/25 border border-bhagwa/50 text-amber-200 text-xs font-extrabold group-hover:bg-bhagwa group-hover:text-white transition">🔊 माहिती ऐका</span>
+                    </div>
+                    <h3 class="font-heritage text-2xl sm:text-3xl text-white group-hover:text-amber-300 transition">भोरप्या डोंगरावरील अभेद्य दुर्ग रचनेचे रहस्य</h3>
+                    <p class="text-sm sm:text-base text-amber-100/80 leading-relaxed">
+                        छत्रपती शिवाजी महाराजांनी इ.स. १६५६ मध्ये पेशवे मोरोपंत त्र्यंबक पिंगळे यांच्या करवी भोरप्या डोंगरावर प्रतापगड बांधून घेतला. दक्षिण व पश्चिमेस २५० मीटर खोल कडे असलेल्या या गडाचे 'माची' आणि 'बालेकिल्ला' असे दोन स्तर असून पार घाट व कोकण मार्गावर या गडाची करडी नजर असे.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 grid grid-cols-2 gap-3 text-center">
+                    <div class="bg-fort-950/90 p-4 rounded-2xl border border-amber-500/20">
+                        <span class="block font-heritage text-xl sm:text-2xl text-bhagwa-light">१० नोव्हेंबर १६५९</span>
+                        <span class="text-xs text-amber-100/70">प्रतापगड रणसंग्राम</span>
+                    </div>
+                    <div class="bg-fort-950/90 p-4 rounded-2xl border border-amber-500/20">
+                        <span class="block font-heritage text-xl sm:text-2xl text-amber-400">२५० मीटर</span>
+                        <span class="text-xs text-amber-100/70">उभ्या कड्यांची उंची</span>
+                    </div>
+                    <div class="bg-fort-950/90 p-4 rounded-2xl border border-amber-500/20">
+                        <span class="block font-heritage text-xl sm:text-2xl text-amber-400">२ स्तर</span>
+                        <span class="text-xs text-amber-100/70">माची व बालेकिल्ला</span>
+                    </div>
+                    <div class="bg-fort-950/90 p-4 rounded-2xl border border-amber-500/20">
+                        <span class="block font-heritage text-xl sm:text-2xl text-bhagwa-light">इ.स. १६६१</span>
+                        <span class="text-xs text-amber-100/70">भवानी माता मंदिर</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="battlement-border"></div>
+
+<!-- ==================== 7. VISITOR FEEDBACK ==================== -->
+<section id="feedback" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fort-950 relative z-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-fort-900 border-2 border-amber-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-5 space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-bhagwa/20 text-bhagwa-light text-xs font-bold tracking-wider">
+                        प्रेक्षकांचे कौतुक • अभिप्राय नोंदवा
+                    </span>
+                    <h3 class="font-heritage text-2xl sm:text-3xl text-white">तुमचा अभिप्राय व दिवाळी शुभेच्छा नोंदवा!</h3>
+                    <p class="text-xs sm:text-sm text-amber-100/75">
+                        आमच्या प्रतापगड निर्मिती टीमने साकारलेला हा किल्ला तुम्हाला कसा वाटला? तुमचा अभिप्राय नक्की लिहा!
+                    </p>
+                    <form onsubmit="submitVisitorWish(event)" class="space-y-3 pt-2">
+                        <input type="text" id="visitorNameInput" required placeholder="तुमचे पूर्ण नाव" class="w-full px-4 py-3 rounded-xl bg-fort-950 border border-amber-500/30 text-white placeholder-amber-200/40 text-sm focus:outline-none focus:border-bhagwa">
+                        <textarea id="visitorMsgInput" required rows="2" placeholder="किल्ल्याबद्दल तुमचा अभिप्राय व शुभेच्छा येथे लिहा..." class="w-full px-4 py-3 rounded-xl bg-fort-950 border border-amber-500/30 text-white placeholder-amber-200/40 text-sm focus:outline-none focus:border-bhagwa"></textarea>
+                        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-bhagwa to-amber-600 hover:from-bhagwa-light hover:to-amber-500 text-white font-bold text-sm shadow-lg transition">
+                            अभिप्राय पाठवा
+                        </button>
+                    </form>
+                </div>
+                <div class="lg:col-span-7 space-y-3">
+                    <h4 class="text-xs font-bold tracking-wider text-amber-400">प्रेक्षकांचे ताजे अभिप्राय:</h4>
+                    <div id="visitorWishesList" class="space-y-3 max-h-72 overflow-y-auto pr-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="battlement-border"></div>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-fort-950 border-t border-amber-500/20 py-12 px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-bhagwa to-amber-600 text-white shadow-lg">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M5 3v18H3V3h2zm2 0h14l-3.5 4.5L21 12H7V3z"/>
+                </svg>
+            </div>
+            <h3 class="font-heritage text-2xl sm:text-3xl text-amber-400">
+                ।। प्रौढ प्रताप पुरंदर, क्षत्रिय कुलावतंस, राजा शिवछत्रपती महाराज की जय ।।
+            </h3>
+            <p class="text-xs sm:text-sm text-amber-100/75 max-w-xl mx-auto">
+                महाराष्ट्राची दिवाळी दुर्ग बांधणी परंपरा जपण्यासाठी आणि छत्रपती शिवाजी महाराजांच्या पराक्रमाला मानवंदना देण्यासाठी <strong class="text-amber-300">प्रतापगड निर्मिती टीम</strong> तर्फे सादर.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL: LIGHTBOX VIEWER ==================== -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox(event)">
+        <div class="max-w-4xl w-full bg-fort-900 border border-amber-500/40 rounded-3xl overflow-hidden shadow-2xl relative" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center text-lg">✕</button>
+            <div id="lightboxMediaContainer" class="w-full bg-black flex items-center justify-center max-h-[70vh] overflow-hidden"></div>
+            <div class="p-6">
+                <span id="lightboxBadge" class="px-2.5 py-1 rounded-full bg-bhagwa/20 text-bhagwa-light text-xs font-bold"></span>
+                <h3 id="lightboxTitle" class="font-heritage text-2xl text-white mt-2"></h3>
+                <p id="lightboxDesc" class="text-sm text-amber-100/80 mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== APPLICATION JAVASCRIPT (100% MARATHI) ==================== -->
+    <script>
+        /* ==============================================================
+           0. SMART 960x1280 JPEG PATH RESOLVER FOR VS CODE & BROWSERS
+           ============================================================== */
+        // Automatically fixes Windows backslashes (\), C:\ local paths, spaces, and .jpg/.jpeg extensions
+        function handleSmartJpegError(imgEl) {
+            if (!imgEl) return;
+            const rawAttr = imgEl.getAttribute('src') || '';
+            const step = parseInt(imgEl.dataset.retryStep || '0', 10);
+
+            // Normalize Windows backslashes to forward slashes
+            const normalized = rawAttr.replace(/\\/g, '/').trim();
+            // Extract just the file name if user pasted a full C:/Users/... path in VS Code
+            const fileNameOnly = normalized.split('/').pop();
+
+            if (step === 0 && normalized !== rawAttr && normalized !== '') {
+                imgEl.dataset.retryStep = '1';
+                imgEl.src = normalized;
+                return;
+            }
+            if (step <= 1 && fileNameOnly && fileNameOnly !== normalized) {
+                imgEl.dataset.retryStep = '2';
+                imgEl.src = fileNameOnly;
+                return;
+            }
+            if (step <= 2 && fileNameOnly) {
+                imgEl.dataset.retryStep = '3';
+                // Try swapping .jpg <-> .jpeg automatically
+                if (/\.jpeg$/i.test(fileNameOnly)) {
+                    imgEl.src = fileNameOnly.replace(/\.jpeg$/i, '.jpg');
+                    return;
+                } else if (/\.jpg$/i.test(fileNameOnly)) {
+                    imgEl.src = fileNameOnly.replace(/\.jpg$/i, '.jpeg');
+                    return;
+                }
+            }
+            if (step <= 3 && imgEl.dataset.fallbackSrc) {
+                imgEl.dataset.retryStep = '4';
+                imgEl.src = imgEl.dataset.fallbackSrc;
+                return;
+            }
+
+            // If file is not yet placed in folder, keep opacity-0 so the SVG fort underneath shows cleanly
+            imgEl.classList.remove('opacity-100');
+            imgEl.classList.add('opacity-0');
+        }
+
+        /* ==============================================================
+           1. MARATHI DIGITS CONVERTER, MULTI-ENGINE VOICEOVER & STATE
+           ============================================================== */
+        let currentHotspotId = 1;
+        let currentGalleryFilter = 'all';
+        let activeHistoryIndex = -1;
+
+        // Masculine Marathi Voiceover State
+        let currentNarrationId = 0;
+        let isVoicePlaying = false;
+        let activeHtmlAudio = null;
+        let cachedSpeechVoices = [];
+
+        if ('speechSynthesis' in window) {
+            cachedSpeechVoices = window.speechSynthesis.getVoices();
+            window.speechSynthesis.onvoiceschanged = () => {
+                cachedSpeechVoices = window.speechSynthesis.getVoices();
+            };
+        }
+
+        function toMarathiDigits(input) {
+            const marathiNums = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+            return String(input).replace(/[0-9]/g, d => marathiNums[d]);
+        }
+
+        // Stop any active Marathi narration immediately
+        function stopMarathiVoiceover() {
+            currentNarrationId++;
+            isVoicePlaying = false;
+
+            if (activeHtmlAudio) {
+                try {
+                    activeHtmlAudio.pause();
+                    activeHtmlAudio.src = '';
+                } catch (e) {}
+                activeHtmlAudio = null;
+            }
+
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.cancel();
+                } catch (e) {}
+            }
+
+            updateVoiceUIState(false, '');
+        }
+
+        function updateVoiceUIState(active, titleText, isLoading = false) {
+            const playerBar = document.getElementById('voicePlayerBar');
+            const statusLabel = document.getElementById('voiceStatusLabel');
+            const activeTitle = document.getElementById('voiceActiveTitle');
+            const spotVoiceBtn = document.getElementById('spotVoiceBtn');
+            const spotVoiceSubtext = document.getElementById('spotVoiceSubtext');
+
+            if (active) {
+                playerBar.classList.remove('hidden');
+                playerBar.classList.add('flex');
+                activeTitle.textContent = titleText || 'किल्ले प्रतापगड माहिती';
+                statusLabel.textContent = isLoading
+                    ? '⏳ माहिती लोड होत आहे...'
+                    : '🔊 माहिती सुरू आहे';
+
+                if (spotVoiceBtn) {
+                    spotVoiceBtn.innerHTML = isLoading
+                        ? '<span>⏳ लोड होत आहे...</span>'
+                        : '<span>⏹️ थांबवा</span>';
+                }
+                if (spotVoiceSubtext) {
+                    spotVoiceSubtext.textContent = isLoading
+                        ? 'कृपया क्षणभर प्रतीक्षा करा...'
+                        : 'माहिती सुरू आहे...';
+                }
+            } else {
+                playerBar.classList.add('hidden');
+                playerBar.classList.remove('flex');
+                if (spotVoiceBtn) {
+                    spotVoiceBtn.innerHTML = '<span>🔊 माहिती ऐका</span>';
+                }
+                if (spotVoiceSubtext) {
+                    spotVoiceSubtext.textContent = 'ठिकाणावर क्लिक करताच माहिती ऐकू येते';
+                }
+                activeHistoryIndex = -1;
+                renderHistoryTimeline();
+                const archCard = document.getElementById('architectureHistoryCard');
+                if (archCard) archCard.classList.remove('ring-2', 'ring-bhagwa');
+            }
+        }
+
+        // Cloud Marathi TTS Audio Stream Fallback (Works even when Windows has no Marathi TTS pack installed)
+        function playMarathiCloudAudioStream(marathiText, reqId, titleLabel) {
+            if (reqId !== currentNarrationId) return;
+
+            // Split into sentences under 180 chars for smooth streaming
+            const rawSentences = marathiText.match(/[^।.!?]+[।.!?]?/g) || [marathiText];
+            const chunks = [];
+            let currentChunk = '';
+
+            rawSentences.forEach(s => {
+                if ((currentChunk + ' ' + s).trim().length <= 175) {
+                    currentChunk = (currentChunk + ' ' + s).trim();
+                } else {
+                    if (currentChunk) chunks.push(currentChunk);
+                    currentChunk = s.trim();
+                }
+            });
+            if (currentChunk) chunks.push(currentChunk);
+
+            let chunkIdx = 0;
+
+            function playNextChunk() {
+                if (reqId !== currentNarrationId || chunkIdx >= chunks.length) {
+                    if (reqId === currentNarrationId) {
+                        isVoicePlaying = false;
+                        updateVoiceUIState(false, '');
+                    }
+                    return;
+                }
+
+                const textPart = encodeURIComponent(chunks[chunkIdx]);
+                chunkIdx++;
+                const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=mr&dt=t&q=${textPart}`;
+
+                const audio = new Audio(url);
+                activeHtmlAudio = audio;
+                // Slightly lower playback rate with pitch shift for deeper voice
+                audio.playbackRate = 0.94;
+                if ('preservesPitch' in audio) audio.preservesPitch = false;
+                if ('mozPreservesPitch' in audio) audio.mozPreservesPitch = false;
+                if ('webkitPreservesPitch' in audio) audio.webkitPreservesPitch = false;
+
+                audio.onplay = () => {
+                    if (reqId === currentNarrationId) {
+                        isVoicePlaying = true;
+                        updateVoiceUIState(true, titleLabel, false);
+                    }
+                };
+
+                audio.onended = () => {
+                    playNextChunk();
+                };
+
+                audio.onerror = () => {
+                    // If blocked by CORS/offline, use default browser speechSynthesis without strict lang lock
+                    useUnrestrictedBrowserTTS(marathiText, reqId, titleLabel);
+                };
+
+                audio.play().catch(() => {
+                    useUnrestrictedBrowserTTS(marathiText, reqId, titleLabel);
+                });
+            }
+
+            playNextChunk();
+        }
+
+        function useUnrestrictedBrowserTTS(marathiScript, reqId, titleLabel) {
+            if (reqId !== currentNarrationId || !('speechSynthesis' in window)) {
+                updateVoiceUIState(false, '');
+                return;
+            }
+            try {
+                window.speechSynthesis.cancel();
+                const utter = new SpeechSynthesisUtterance(marathiScript);
+                const voices = cachedSpeechVoices.length ? cachedSpeechVoices : window.speechSynthesis.getVoices();
+                const bestVoice = voices.find(v => v.lang.includes('mr') || v.lang.includes('hi') || v.lang.includes('IN')) || voices[0];
+                if (bestVoice) {
+                    utter.voice = bestVoice;
+                    utter.lang = bestVoice.lang;
+                }
+                utter.pitch = 0.78;
+                utter.rate = 0.92;
+
+                utter.onstart = () => {
+                    if (reqId === currentNarrationId) {
+                        isVoicePlaying = true;
+                        updateVoiceUIState(true, titleLabel, false);
+                    }
+                };
+                utter.onend = () => {
+                    if (reqId === currentNarrationId) {
+                        isVoicePlaying = false;
+                        updateVoiceUIState(false, '');
+                    }
+                };
+                utter.onerror = () => {
+                    if (reqId === currentNarrationId) {
+                        isVoicePlaying = false;
+                        updateVoiceUIState(false, '');
+                    }
+                };
+                window.speechSynthesis.speak(utter);
+            } catch (e) {
+                updateVoiceUIState(false, '');
+            }
+        }
+
+        // Primary Voiceover Trigger: Uses Native Marathi/Hindi Male Voice if installed, else Cloud Marathi Audio Stream
+        function speakInMasculineMarathi(cacheKey, titleLabel, marathiScript) {
+            stopMarathiVoiceover();
+            const reqId = ++currentNarrationId;
+
+            updateVoiceUIState(true, titleLabel, true);
+
+            if ('speechSynthesis' in window) {
+                const voices = cachedSpeechVoices.length ? cachedSpeechVoices : window.speechSynthesis.getVoices();
+                const nativeMarathiOrHindiVoice = voices.find(v =>
+                    (v.lang.toLowerCase().includes('mr') || v.lang.toLowerCase().includes('hi')) &&
+                    /male|hemant|prabhat|madhur|ravi/i.test(v.name)
+                ) || voices.find(v =>
+                    v.lang.toLowerCase().includes('mr') || v.lang.toLowerCase().includes('hi')
+                );
+
+                if (nativeMarathiOrHindiVoice) {
+                    let started = false;
+                    window.speechSynthesis.cancel();
+                    const utter = new SpeechSynthesisUtterance(marathiScript);
+                    utter.voice = nativeMarathiOrHindiVoice;
+                    utter.lang = nativeMarathiOrHindiVoice.lang;
+                    utter.pitch = 0.75; // Deep masculine pitch
+                    utter.rate = 0.92;  // Clear royal pace
+
+                    utter.onstart = () => {
+                        started = true;
+                        if (reqId === currentNarrationId) {
+                            isVoicePlaying = true;
+                            updateVoiceUIState(true, titleLabel, false);
+                        }
+                    };
+
+                    utter.onend = () => {
+                        if (reqId === currentNarrationId) {
+                            isVoicePlaying = false;
+                            updateVoiceUIState(false, '');
+                        }
+                    };
+
+                    utter.onerror = () => {
+                        if (!started && reqId === currentNarrationId) {
+                            playMarathiCloudAudioStream(marathiScript, reqId, titleLabel);
+                        }
+                    };
+
+                    window.speechSynthesis.speak(utter);
+
+                    // Watchdog: If browser speechSynthesis hangs without starting in 800ms, switch to Cloud Marathi Audio
+                    setTimeout(() => {
+                        if (!started && reqId === currentNarrationId) {
+                            window.speechSynthesis.cancel();
+                            playMarathiCloudAudioStream(marathiScript, reqId, titleLabel);
+                        }
+                    }, 800);
+                    return;
+                }
+            }
+
+            // If no Marathi/Hindi voice pack is installed in Windows/Browser, stream Marathi TTS audio directly
+            playMarathiCloudAudioStream(marathiScript, reqId, titleLabel);
+        }
+
+        function speakCurrentHotspot() {
+            if (isVoicePlaying) {
+                stopMarathiVoiceover();
+                return;
+            }
+            const spot = mudModelHotspots.find(s => s.id === currentHotspotId) || mudModelHotspots[0];
+            const narrationText = `${spot.nameMr}. ऐतिहासिक महत्त्व: ${spot.historyMr} प्रतिकृती निर्मिती: ${spot.craftMr}`;
+            speakInMasculineMarathi(`spot_${spot.id}`, spot.nameMr, narrationText);
+        }
+
+        function speakHistorySlide(index) {
+            if (isVoicePlaying && activeHistoryIndex === index) {
+                stopMarathiVoiceover();
+                return;
+            }
+            const item = historyTimelineData[index];
+            if (!item) return;
+            activeHistoryIndex = index;
+            renderHistoryTimeline();
+
+            const narrationText = `किल्ले प्रतापगड इतिहास, काळ ${item.year}. ${item.titleMr}. ${item.descMr}`;
+            speakInMasculineMarathi(`history_${index}`, `${item.year} • ${item.titleMr}`, narrationText);
+        }
+
+        function speakArchitectureBanner() {
+            const archCard = document.getElementById('architectureHistoryCard');
+            if (archCard) archCard.classList.add('ring-2', 'ring-bhagwa');
+            const narrationText = `दुर्ग स्थापत्यशास्त्र आणि भोरप्या डोंगरावरील अभेद्य दुर्ग रचनेचे रहस्य. छत्रपती शिवाजी महाराजांनी इसवी सन सोळाशे छप्पन्न मध्ये पेशवे मोरोपंत त्र्यंबक पिंगळे यांच्या करवी भोरप्या डोंगरावर प्रतापगड बांधून घेतला. दक्षिण व पश्चिमेस दोनशे पन्नास मीटर खोल कडे असलेल्या या गडाचे माची आणि बालेकिल्ला असे दोन स्तर असून पार घाट व कोकण मार्गावर या गडाची करडी नजर असे.`;
+            speakInMasculineMarathi('history_arch', 'भोरप्या डोंगरावरील अभेद्य दुर्ग रचनेचे रहस्य', narrationText);
+        }
+
+        /* ==============================================================
+           2. ALL 13 MINIATURE PLACES OF PRATAPGAD FROM USER'S PHOTO
+           ============================================================== */
+        const mudModelHotspots = [
+            {
+                id: 1,
+                numMr: "१",
+                nameMr: "१. झेंडा बुरुज",
+                historyMr: "बालेकिल्ल्याच्या ईशान्य कोपऱ्यात असलेला झेंडा बुरुज हा प्रतापगडावरील सर्वोच्च व अत्यंत महत्त्वाचा बुरुज आहे. येथून संपूर्ण जावळीच्या खोऱ्यावर व महाबळेश्वर पठारावर लक्ष ठेवता येत असे आणि याच बुरुजावर स्वराज्याचा अस्मितादर्शक भगवा ध्वज दिमाखात फडकत असे.",
+                craftMr: "आमच्या मातीच्या किल्ल्यावर बालेकिल्ल्याच्या उजव्या सर्वोच्च टोकावर दगड व लाल मातीने उंच गोलाकार झेंडा बुरुज घडवून त्यावर मोठा भगवा ध्वज फडकवला आहे.",
+                materials: ["लाल माती", "दगडी पाया", "उंच भगवा ध्वज", "बुरुज चर्या"]
+            },
+            {
+                id: 2,
+                numMr: "२",
+                nameMr: "२. भवानी तलाव",
+                historyMr: "गडाच्या माची भागात श्री भवानी माता मंदिराच्या जवळच पाण्याचा ऐतिहासिक 'भवानी तलाव' आहे. गडावरील शिबंदीला आणि मंदिरात येणाऱ्या भाविकांना वर्षभर पाणी मिळावे यासाठी शिवकाळात या तलावाची निर्मिती करण्यात आली.",
+                craftMr: "श्री भवानी माता मंदिराच्या खालच्या बाजूला आम्ही मातीमध्ये खड्डा कोरून, बाजूने दगडी बांधकाम केले व त्यात निळ्या रंगाचे पाणी साठवून 'भवानी तलाव' साकारला आहे.",
+                materials: ["ओली माती", "दगडी काठ", "निळा जलरंग", "भोवतालची हिरवळ"]
+            },
+            {
+                id: 3,
+                numMr: "३",
+                nameMr: "३. श्री भवानी माता मंदिर",
+                historyMr: "छत्रपती शिवाजी महाराजांनी इ.स. १६६१ मध्ये माचीच्या पूर्व भागात कुलस्वामिनी श्री तुळजाभवानी मातेचे मंदिर उभारले. नेपाळच्या गंडकी नदीतून शाळिग्राम शिळा आणून घडवलेली अष्टभुजा देवीची मूर्ती येथे स्थापन करण्यात आली.",
+                craftMr: "माचीच्या पठारावर शाडू माती व पुठ्ठ्याचा आधार देऊन आम्ही श्री भवानी माता मंदिराचा गाभारा, सोनेरी कळस, छोटी दीपमाळ आणि भगवा ध्वज साकारला आहे.",
+                materials: ["शाडू माती", "सोनेरी कळस", "छोटी दीपमाळ", "पणत्यांची आरास"]
+            },
+            {
+                id: 4,
+                numMr: "४",
+                nameMr: "४. केदार बुरुज",
+                historyMr: "बालेकिल्ल्याच्या वायव्य भागातील केदारेश्वर महादेव मंदिराच्या शेजारी असलेला हा भक्कम बुरुज 'केदार बुरुज' म्हणून ओळखला जातो. या बुरुजावरून गडाच्या उत्तर आणि पश्चिम भागातील कड्यांचे संरक्षण केले जात असे.",
+                craftMr: "बालेकिल्ल्याच्या डाव्या वरच्या टोकाला भक्कम दगडी तटबंदी रचून त्यावर काळ्या पाषाणाचा रंग देत आम्ही केदार बुरुजाची प्रतिकृती तयार केली आहे.",
+                materials: ["काळा पाषाण रंग", "मातीचा लेप", "टेहळणी मावळे"]
+            },
+            {
+                id: 5,
+                numMr: "५",
+                nameMr: "५. रेडका बुरुज",
+                historyMr: "महादरवाजाच्या खालील बाजूस व दक्षिण-पश्चिम कड्यावर असलेला रेडका बुरुज शत्रूच्या आक्रमणास रोखण्यासाठी अत्यंत मोक्याच्या जागी बांधण्यात आला होता. महादरवाजाकडे येणाऱ्या वाटेवर या बुरुजावरून थेट मारा करता येत असे.",
+                craftMr: "मुख्य प्रवेशद्वाराच्या डाव्या बाजूला कड्याच्या टोकावर अर्धवर्तुळाकार दगड व माती रचून आम्ही रेडका बुरुज आणि त्यावरील भालाधारी मावळे साकारले आहेत.",
+                materials: ["दगड व खडी", "लाल माती", "भालाधारी मावळे", "मातीच्या पणत्या"]
+            },
+            {
+                id: 6,
+                numMr: "६",
+                nameMr: "६. चोर दरवाजा",
+                historyMr: "संकटकाळात किंवा गुप्त मोहिमेसाठी गडाबाहेर पडण्यासाठी बालेकिल्ल्याच्या पश्चिम तटबंदीमध्ये लहान व अत्यंत छुप्या पद्धतीने 'चोर दरवाजा' बांधण्यात आला होता. येथून थेट कोकणच्या दिशेने जाणाऱ्या घळीत उतरता येत असे.",
+                craftMr: "बालेकिल्ल्याच्या डाव्या तटबंदीमध्ये दगडांच्या आडोशाला लहान कमान कोरून आम्ही गुप्त चोर दरवाजाची प्रतिकृती साकारली आहे.",
+                materials: ["चपटे दगड", "छुपी कमान", "पाषाण रंगकाम"]
+            },
+            {
+                id: 7,
+                numMr: "७",
+                nameMr: "७. यशवंत बुरुज",
+                historyMr: "माचीच्या पूर्व-दक्षिण भागात असलेला यशवंत बुरुज हा प्रतापगडाच्या प्रमुख बुरुजांपैकी एक आहे. जावळीच्या खोऱ्यातून वर येणाऱ्या सर्व हालचालींवर या बुरुजावरून चोवीस तास पाळत ठेवली जात असे.",
+                craftMr: "आमच्या किल्ल्याच्या उजव्या बाजूला माचीच्या तटबंदीला जोडून आम्ही भव्य गोलाकार यशवंत बुरुज आणि तटबंदीच्या चर्या घडवल्या आहेत.",
+                materials: ["जड दगड", "ओली लाल माती", "बुरुज चर्या", "पहारेकरी मावळे"]
+            },
+            {
+                id: 8,
+                numMr: "८",
+                nameMr: "८. गोडे तलाव",
+                historyMr: "बालेकिल्ल्यावर वर्षभर पिण्याच्या गोड्या पाण्याचा पुरवठा करणारे 'गोडे तलाव' हे शिवकालीन जलव्यवस्थापनाचे उत्तम उदाहरण आहे. कातळात कोरलेल्या या तलावातील पाणी उन्हाळ्यातही आटत नाही.",
+                craftMr: "बालेकिल्ल्याच्या पठारावर छत्रपती शिवाजी महाराज स्मारकाच्या बाजूला दगडी काठ असलेला चौकोनी-गोलाकार 'गोडे तलाव' आम्ही तयार केला आहे.",
+                materials: ["दगडी बांधणी", "निळे पाणी", "शाडू मातीचा काठ"]
+            },
+            {
+                id: 9,
+                numMr: "९",
+                nameMr: "९. मुख्य प्रवेशद्वार",
+                historyMr: "प्रतापगडाचे मुख्य प्रवेशद्वार (महादरवाजा) हे 'गोमुखी' बांधणीचे आहे. दोन प्रचंड बुरुजांच्या आडोशाला वळणावर हा दरवाजा असल्याने शत्रूच्या हत्तींना थेट धडक देणे अशक्य होते व वरून मावळ्यांना शत्रूवर मारा करणे सोपे जात असे.",
+                craftMr: "आम्ही लाल माती आणि चपट्या दगडांचा वापर करून नागमोडी पायऱ्या व दोन भक्कम बुरुजांच्या मध्ये मुख्य प्रवेशद्वाराची कमान साकारली आहे.",
+                materials: ["लाल माती", "चपटे दगड", "प्रवेशद्वार कमान", "पहारेकरी मावळे"]
+            },
+            {
+                id: 10,
+                numMr: "१०",
+                nameMr: "१०. बालेकिल्ला द्वार",
+                historyMr: "खालच्या माचीवरून वरच्या बालेकिल्ल्यात प्रवेश करण्यासाठी मजबूत पाषाणात बांधलेले 'बालेकिल्ला द्वार' ओलांडावे लागते. हे द्वार बंद केल्यावर बालेकिल्ला पूर्णपणे स्वतंत्र व अभेद्य राहत असे.",
+                craftMr: "माचीवरून बालेकिल्ल्यावर जाणाऱ्या पायऱ्यांच्या टोकाला दुहेरी तटबंदीमध्ये आम्ही बालेकिल्ला द्वार साकारले आहे.",
+                materials: ["दगडी पायऱ्या", "बालेकिल्ला कमान", "तटबंदी पाषाण"]
+            },
+            {
+                id: 11,
+                numMr: "११",
+                nameMr: "११. पालखी मार्ग",
+                historyMr: "श्री भवानी मातेची पालखी आणि राजपरिवाराच्या सोयीसाठी गडावर प्रशस्त व कमी चढावाचा दगडी 'पालखी मार्ग' बांधण्यात आला होता. आजही उत्सवाच्या काळात या ऐतिहासिक मार्गावरून देवीची पालखी निघते.",
+                craftMr: "किल्ल्याच्या पायथ्यापासून श्री भवानी माता मंदिर आणि बालेकिल्ल्यापर्यंत लहान चपट्या दगडांची रांग लावून आम्ही वळणावळणाचा पालखी मार्ग साकारला आहे.",
+                materials: ["सपाट दगडी पाट्या", "मातीचा भराव", "मोहरीची हिरवळ"]
+            },
+            {
+                id: 12,
+                numMr: "१२",
+                nameMr: "१२. प्रतापगड विश्रामधाम",
+                historyMr: "गडाच्या पायथ्याशी व चढावाच्या सुरुवातीस शिवभक्तांच्या आणि प्रवाशांच्या निवासासाठी व विश्रांतीसाठी 'प्रतापगड विश्रामधाम' ही वास्तू आहे.",
+                craftMr: "किल्ल्याच्या पायथ्याशी हिरवळीच्या कुशीत कौलारू छताची सुंदर छोटी प्रतिकृती तयार करून आम्ही 'प्रतापगड विश्रामधाम' दर्शवले आहे.",
+                materials: ["पुठ्ठा व शाडू माती", "कौलारू छत रंगकाम", "पायथ्याची हिरवळ"]
+            },
+            {
+                id: 13,
+                numMr: "१३",
+                nameMr: "१३. छत्रपती शिवाजी महाराज स्मारक",
+                historyMr: "बालेकिल्ल्याच्या मध्यभागी समुद्रसपाटीपासून ३,५४३ फूट उंचीवर छत्रपती शिवाजी महाराजांचा भव्य १७ फूट उंचीचा कांस्य अश्वारूढ पुतळा (स्मारक) दिमाखात उभा आहे. ३० नोव्हेंबर १९५७ रोजी या ऐतिहासिक स्मारकाचे अनावरण झाले.",
+                craftMr: "आमच्या मातीच्या किल्ल्याच्या सर्वोच्च बालेकिल्ल्यावर दगडी चौथरा बांधून त्यावर छत्रपती शिवाजी महाराजांची अश्वारूढ मूर्ती बसवली आहे आणि भोवताली पणत्या व मोहरीची हिरवळ सजवली आहे.",
+                materials: ["शिवरायांची अश्वारूढ मूर्ती", "दगडी चौथरा", "भगवा ध्वज", "मातीच्या पणत्या"]
+            }
+        ];
+
+        /* ==============================================================
+           3. HISTORICAL TIMELINE DATA (100% MARATHI)
+           ============================================================== */
+        const historyTimelineData = [
+            {
+                year: "इ.स. १६५६",
+                badgeMr: "स्वराज्याची दूरदृष्टी",
+                titleMr: "जावळीवर ताबा आणि भोरप्या डोंगरावर दुर्ग उभारणीचा निर्णय",
+                descMr: "जावळीचे खोरे स्वराज्यात सामील केल्यानंतर पार घाटावर व कोकण मार्गावर नियंत्रण ठेवण्यासाठी छत्रपती शिवाजी महाराजांनी भोरप्या डोंगराची निवड केली. पेशवे मोरोपंत त्र्यंबक पिंगळे यांच्या देखरेखीखाली या अभेद्य गडाचे बांधकाम झाले आणि महाराजांनी यास 'प्रतापगड' असे नाव दिले."
+            },
+            {
+                year: "इ.स. १६५६ ते १६५८",
+                badgeMr: "अभेद्य दुर्ग स्थापत्य",
+                titleMr: "माची आणि बालेकिल्ला अशी दुहेरी अभेद्य तटबंदी",
+                descMr: "अत्यंत कमी कालावधीत गडावर दुहेरी तटबंदी उभारण्यात आली. २५० मीटर खोल तुटलेले कडे, गोमुखी मुख्य प्रवेशद्वार, झेंडा बुरुज, रेडका बुरुज, केदार बुरुज, यशवंत बुरुज आणि गडावरील भवानी तलाव व गोडे तलाव यामुळे हा किल्ला जिंकणे शत्रूसाठी अशक्य बनले."
+            },
+            {
+                year: "१० नोव्हेंबर १६५९",
+                badgeMr: "ऐतिहासिक रणसंग्राम",
+                titleMr: "प्रतापगडाचा रणसंग्राम: हिंदवी स्वराज्याचा सुवर्णक्षण",
+                descMr: "अफजलखानाच्या महाप्रचंड सैन्याला शिवरायांनी युद्धनीतीने जावळीच्या कठीण खोऱ्यात आणले. भेटीच्या शामियान्यात खानाने दगाफटका करताच शिवरायांनी वाघनखांच्या सहाय्याने त्याचा वध केला. सय्यद बंडाचा वार जिवा महालाने वरचेवर झेलला ('होता जीवा म्हणून वाचला शिवा') आणि कान्होजी जेधे व मावळ्यांनी शत्रूचा धुव्वा उडवला."
+            },
+            {
+                year: "इ.स. १६६१",
+                badgeMr: "भक्ती आणि शक्ती",
+                titleMr: "गडावर श्री भवानी माता मंदिराची स्थापना",
+                descMr: "स्वराज्याचे कुलदैवत असलेल्या आई तुळजाभवानीचे दर्शन गडावरच घडावे यासाठी इ.स. १६६१ मध्ये महाराजांनी गडाच्या माचीवर श्री भवानी माता मंदिराची स्थापना केली. भक्ती आणि शक्तीचा हा संगम आजही लाखो शिवभक्तांना प्रेरणा देतो."
+            }
+        ];
+
+        /* ==============================================================
+           4. DEFAULT GALLERY MEDIA & TEAM MEMBERS (100% MARATHI)
+           ============================================================== */
+        /* =========================================================================
+           GALLERY PHOTO URL PLACEHOLDERS (Supports 960x1280 Portrait & All Sizes):
+           Paste your photo file names or URLs inside url: "" below (use forward / )
+           ========================================================================= */
+        const defaultGalleryItems = [
+            {
+                id: "g1",
+                category: "final",
+                type: "image",
+                url: "photos/photo1.jpeg",
+                svgPreset: "finalFort",
+                titleMr: "पूर्ण झालेली किल्ले प्रतापगडाची भव्य प्रतिकृती",
+                descMr: "बालेकिल्ला, झेंडा बुरुज, श्री भवानी माता मंदिर, पालखी मार्ग, मुख्य प्रवेशद्वार आणि छत्रपती शिवाजी महाराज स्मारकासह पूर्णपणे सजलेला आमचा किल्ले प्रतापगड."
+            },
+            {
+                id: "g2",
+                category: "final",
+                type: "image",
+                url: "photos/photo6.jpeg",
+                svgPreset: "finalFort",
+                titleMr: "श्री भवानी माता मंदिर आणि मुख्य प्रवेशद्वार",
+                descMr: "माचीवरील श्री भवानी माता मंदिर, भवानी तलाव, पालखी मार्ग आणि मुख्य प्रवेशद्वाराची जवळून घेतलेली छबी."
+            },
+            {
+                id: "g3",
+                category: "making",
+                type: "image",
+                url: "WhatsApp Image 2026-11-06 at 9.42.05 AM (1).jpeg",
+                svgPreset: "mahadarwazaClose",
+                titleMr: "बालेकिल्ला द्वार, गोडे तलाव आणि चोर दरवाजा",
+                descMr: "बालेकिल्ला द्वार, गोडे तलाव, चोर दरवाजा आणि छत्रपती शिवाजी महाराज स्मारकाचे दृश्य."
+            },
+            {
+                id: "g4",
+                category: "night",
+                type: "image",
+                url: "WhatsApp Image 2026-11-06 at 9.42.04 AM.jpeg",
+                svgPreset: "mavlaPaint",
+                titleMr: "छत्रपती शिवाजी महाराज स्मारक आणि प्रतापगड विश्रामधाम",
+                descMr: "बालेकिल्ल्यावरील मध्यवर्ती स्मारक, प्रतापगड विश्रामधाम आणि यशवंत बुरुज."
+            }
+        ];
+
+        const defaultTeamMembers = [
+            { nameMr: "विश्वजीत माळी" },
+            { nameMr: "अभिजीत माळी" },
+            { nameMr: "चंद्रकांत पाटील" },
+            { nameMr: "आकाश बाईत" },
+            { nameMr: "आर्यन बाईत" },
+            { nameMr: "तन्वेश बाईत" },
+            { nameMr: "तन्वी बाईत" },
+            { nameMr: "प्रज्ञा बाईत" },
+            { nameMr: "अनुष्का बाईत" },
+            { nameMr: "घनश्याम मोरे" },
+            { nameMr: "कृष्णा मोरे" },
+            { nameMr: "प्रसाद पायघन" },
+            { nameMr: "पूजा पायघन" },
+            { nameMr: "सुहास रेड्डी" },
+            { nameMr: "तृप्ती रेड्डी" },
+            { nameMr: "आदित्य बिराजदार" },
+            { nameMr: "रियांश धनवटे" },
+            { nameMr: "आदर्श वानखडे" },
+            { nameMr: "तनिष्का पटेल" },
+            { nameMr: "तृप्ती कोकाटे" },
+            { id: "t21", nameMr: "शिवांश धनवटे" }
+        ];
+
+        const defaultVisitorWishes = [
+            {
+                name: "श्री. राजेंद्र कुलकर्णी",
+                msg: "प्रतापगड निर्मिती टीमने खूपच अप्रतिम किल्ला साकारला आहे! झेंडा बुरुज, भवानी तलाव, गोडे तलाव आणि श्री भवानी माता मंदिराची प्रतिकृती व माहिती वाचून खूप आनंद झाला. जय शिवराय! 🚩",
+                time: "आत्ताच"
+            },
+            {
+                name: "स्नेहा पाटील",
+                msg: "किल्ल्यावरील सर्व १३ ठिकाणे आणि मोहरीची खरीखुरी हिरवळ पणत्यांच्या प्रकाशात अतिशय सुंदर दिसत आहे. सर्व सहकाऱ्यांचे मनापासून कौतुक! 🪔",
+                time: "१५ मिनिटांपूर्वी"
+            }
+        ];
+
+        /* ==============================================================
+           5. DATA GETTERS & DIYA COUNTER FUNCTIONS (RESTORED)
+           ============================================================== */
+        function getGalleryItems() {
+            return defaultGalleryItems;
+        }
+
+        function getTeamMembers() {
+            return defaultTeamMembers;
+        }
+
+        function getVisitorWishes() {
+            try {
+                const saved = localStorage.getItem('pratapgad_wishes_mr_v2');
+                return saved ? JSON.parse(saved) : defaultVisitorWishes;
+            } catch (e) {
+                return defaultVisitorWishes;
+            }
+        }
+
+        let diyaCount = 59;
+        try {
+            diyaCount = parseInt(localStorage.getItem('pratapgad_diyas') || '59', 10);
+        } catch (e) {}
+
+        function updateDiyaCounterUI() {
+            const el = document.getElementById('diyaCounterDisplay');
+            if (!el) return;
+            const formatted = diyaCount.toLocaleString('en-IN');
+            el.textContent = toMarathiDigits(formatted) + " 🪔";
+        }
+
+        function playFestiveChime() {
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                const ctx = new AudioCtx();
+                const notes = [523.25, 659.25, 783.99, 1046.50];
+                notes.forEach((freq, idx) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.09);
+                    gain.gain.setValueAtTime(0.10, ctx.currentTime + idx * 0.09);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.09 + 0.8);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(ctx.currentTime + idx * 0.09);
+                    osc.stop(ctx.currentTime + idx * 0.09 + 0.85);
+                });
+            } catch (e) {}
+        }
+
+        function lightFestiveDiya() {
+            diyaCount++;
+            try {
+                localStorage.setItem('pratapgad_diyas', diyaCount.toString());
+            } catch (e) {}
+            updateDiyaCounterUI();
+            playFestiveChime();
+            spawnSkyRocket();
+
+            const glow = document.getElementById('diyaGlowCircle');
+            if (glow) {
+                glow.classList.remove('scale-90', 'bg-amber-500/40');
+                glow.classList.add('scale-125', 'bg-bhagwa/70');
+                setTimeout(() => {
+                    glow.classList.remove('scale-125', 'bg-bhagwa/70');
+                    glow.classList.add('scale-105', 'bg-amber-500/50');
+                }, 900);
+            }
+
+            showToast("🪔 गडावर दिवा प्रज्वलित केला! छत्रपती शिवाजी महाराज की जय! 🚩");
+        }
+
+        /* ==============================================================
+           6. INTERACTIVE 13 FORT HOTSPOTS LOGIC (RESTORED)
+           ============================================================== */
+        function renderHotspotPills() {
+            const bar = document.getElementById('hotspotPillsBar');
+            if (!bar) return;
+            bar.innerHTML = mudModelHotspots.map(spot => {
+                const isSelected = spot.id === currentHotspotId;
+                return `
+                    <button onclick="selectHotspot(${spot.id}, true)" class="px-3 py-1.5 rounded-xl text-xs font-bold transition ${
+                        isSelected
+                            ? 'bg-bhagwa text-white shadow-lg shadow-bhagwa/30 border border-amber-200'
+                            : 'bg-fort-950 text-amber-200/85 hover:bg-fort-800 border border-amber-500/20'
+                    }">
+                        ${spot.nameMr}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectHotspot(id, shouldSpeak = true) {
+            currentHotspotId = id;
+            const spot = mudModelHotspots.find(s => s.id === id) || mudModelHotspots[0];
+
+            const badgeEl = document.getElementById('spotBadge');
+            const titleEl = document.getElementById('spotTitle');
+            const historyEl = document.getElementById('spotHistoryText');
+            const craftEl = document.getElementById('spotCraftText');
+            const tagsEl = document.getElementById('spotMaterialsTags');
+
+            if (badgeEl) badgeEl.textContent = `ठिकाण क्र. ${spot.numMr} • किल्ले प्रतापगड प्रतिकृती`;
+            if (titleEl) titleEl.textContent = spot.nameMr;
+            if (historyEl) historyEl.textContent = spot.historyMr;
+            if (craftEl) craftEl.textContent = spot.craftMr;
+
+            if (tagsEl) {
+                tagsEl.innerHTML = spot.materials.map(mat => `
+                    <span class="px-3 py-1 rounded-lg bg-fort-900 border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                        ${mat}
+                    </span>
+                `).join('');
+            }
+
+            document.querySelectorAll('.hotspot-marker').forEach(btn => {
+                btn.className = "hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-fort-900/95 text-amber-300 font-extrabold text-xs flex items-center justify-center shadow-lg border-2 border-amber-400 transition transform hover:scale-125 z-20";
+            });
+            const activeMarker = document.getElementById(`marker-${id}`);
+            if (activeMarker) {
+                activeMarker.className = "hotspot-marker hotspot-ring absolute -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-bhagwa text-white font-extrabold text-xs flex items-center justify-center shadow-xl border-2 border-white scale-110 transition z-30";
+            }
+
+            renderHotspotPills();
+
+            if (shouldSpeak) {
+                const narrationText = `${spot.nameMr}. ऐतिहासिक महत्त्व: ${spot.historyMr} प्रतिकृती निर्मिती: ${spot.craftMr}`;
+                speakInMasculineMarathi(`spot_${spot.id}`, spot.nameMr, narrationText);
+            }
+        }
+
+        function prevHotspot() {
+            const nextId = currentHotspotId <= 1 ? mudModelHotspots.length : currentHotspotId - 1;
+            selectHotspot(nextId, true);
+        }
+
+        function nextHotspot() {
+            const nextId = currentHotspotId >= mudModelHotspots.length ? 1 : currentHotspotId + 1;
+            selectHotspot(nextId, true);
+        }
+
+        /* ==============================================================
+           7B. FORT PHOTOS CAROUSEL (INLINE HTML SLIDES)
+           ============================================================== */
+        let currentFortSlideIndex = 0;
+        let fortSlideTimer = null;
+
+        function getTotalFortSlides() {
+            const slides = document.querySelectorAll('#fortCarouselTrack .fort-carousel-slide');
+            return slides.length || 6;
+        }
+
+        function renderFortPhotosCarousel() {
+            const dots = document.getElementById('fortCarouselDots');
+            const total = getTotalFortSlides();
+            if (dots) {
+                let dotsHtml = '';
+                for (let idx = 0; idx < total; idx++) {
+                    dotsHtml += `
+                        <button onclick="goToFortSlide(${idx})" id="fort-dot-${idx}" class="h-3 rounded-full transition-all duration-300 ${
+                            idx === currentFortSlideIndex ? 'w-9 bg-bhagwa shadow-md shadow-bhagwa/50' : 'w-3 bg-amber-500/35 hover:bg-amber-400'
+                        }" title="छायाचित्र ${toMarathiDigits(idx + 1)}"></button>
+                    `;
+                }
+                dots.innerHTML = dotsHtml;
+            }
+
+            updateFortCarouselPosition();
+            startFortAutoSlide();
+        }
+
+        function updateFortCarouselPosition() {
+            const track = document.getElementById('fortCarouselTrack');
+            const counter = document.getElementById('fortSlideCounter');
+            const total = getTotalFortSlides();
+            if (!track) return;
+
+            track.style.transform = `translateX(-${currentFortSlideIndex * 100}%)`;
+
+            if (counter) {
+                counter.textContent = `${toMarathiDigits(currentFortSlideIndex + 1)} / ${toMarathiDigits(total)}`;
+            }
+
+            for (let idx = 0; idx < total; idx++) {
+                const dot = document.getElementById(`fort-dot-${idx}`);
+                if (dot) {
+                    dot.className = idx === currentFortSlideIndex
+                        ? 'h-3 w-9 rounded-full bg-bhagwa shadow-md shadow-bhagwa/50 transition-all duration-300'
+                        : 'h-3 w-3 rounded-full bg-amber-500/35 hover:bg-amber-400 transition-all duration-300';
+                }
+            }
+        }
+
+        function nextFortSlide() {
+            const total = getTotalFortSlides();
+            currentFortSlideIndex = (currentFortSlideIndex + 1) % total;
+            updateFortCarouselPosition();
+            startFortAutoSlide();
+        }
+
+        function prevFortSlide() {
+            const total = getTotalFortSlides();
+            currentFortSlideIndex = (currentFortSlideIndex - 1 + total) % total;
+            updateFortCarouselPosition();
+            startFortAutoSlide();
+        }
+
+        function goToFortSlide(index) {
+            currentFortSlideIndex = index;
+            updateFortCarouselPosition();
+            startFortAutoSlide();
+        }
+
+        function startFortAutoSlide() {
+            if (fortSlideTimer) clearInterval(fortSlideTimer);
+            const total = getTotalFortSlides();
+            fortSlideTimer = setInterval(() => {
+                currentFortSlideIndex = (currentFortSlideIndex + 1) % total;
+                updateFortCarouselPosition();
+            }, 3500);
+        }
+
+        /* ==============================================================
+           7C. FORT VIDEOS CAROUSEL (3 VIDEOS: 1 TRANSITION + 2 MAKING)
+           ============================================================== */
+        let currentFortVideoIndex = 0;
+
+        function getTotalFortVideoSlides() {
+            const slides = document.querySelectorAll('#fortVideoCarouselTrack .fort-video-slide');
+            return slides.length || 3;
+        }
+
+        function pauseAllFortVideos() {
+            document.querySelectorAll('#fortVideoCarouselTrack .fort-video-player').forEach(vid => {
+                try { vid.pause(); } catch (e) {}
+            });
+        }
+
+        function renderFortVideosCarousel() {
+            const dots = document.getElementById('fortVideoCarouselDots');
+            const total = getTotalFortVideoSlides();
+            if (dots) {
+                let dotsHtml = '';
+                for (let idx = 0; idx < total; idx++) {
+                    dotsHtml += `
+                        <button onclick="goToFortVideoSlide(${idx})" id="fort-video-dot-${idx}" class="h-3 rounded-full transition-all duration-300 ${
+                            idx === currentFortVideoIndex ? 'w-9 bg-bhagwa shadow-md shadow-bhagwa/50' : 'w-3 bg-amber-500/35 hover:bg-amber-400'
+                        }" title="व्हिडिओ ${toMarathiDigits(idx + 1)}"></button>
+                    `;
+                }
+                dots.innerHTML = dotsHtml;
+            }
+            updateFortVideoCarouselPosition();
+        }
+
+        function updateFortVideoCarouselPosition() {
+            const track = document.getElementById('fortVideoCarouselTrack');
+            const counter = document.getElementById('fortVideoSlideCounter');
+            const total = getTotalFortVideoSlides();
+            if (!track) return;
+
+            track.style.transform = `translateX(-${currentFortVideoIndex * 100}%)`;
+
+            if (counter) {
+                counter.textContent = `${toMarathiDigits(currentFortVideoIndex + 1)} / ${toMarathiDigits(total)}`;
+            }
+
+            const pillLabels = [
+                '🎬 १. सुरुवातीपासून पूर्णत्वापर्यंत (Transition Video)',
+                '⚒️ २. किल्ला निर्मिती व मेहनत (भाग १)',
+                '🧱 ३. किल्ला निर्मिती व मेहनत (भाग २)'
+            ];
+
+            for (let idx = 0; idx < total; idx++) {
+                const dot = document.getElementById(`fort-video-dot-${idx}`);
+                if (dot) {
+                    dot.className = idx === currentFortVideoIndex
+                        ? 'h-3 w-9 rounded-full bg-bhagwa shadow-md shadow-bhagwa/50 transition-all duration-300'
+                        : 'h-3 w-3 rounded-full bg-amber-500/35 hover:bg-amber-400 transition-all duration-300';
+                }
+                const pill = document.getElementById(`video-pill-${idx}`);
+                if (pill) {
+                    pill.className = idx === currentFortVideoIndex
+                        ? 'px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-bhagwa text-white shadow-lg border border-amber-200'
+                        : 'px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-fort-950 text-amber-200/85 hover:bg-fort-800 border border-amber-500/30';
+                    if (pillLabels[idx]) pill.textContent = pillLabels[idx];
+                }
+            }
+        }
+
+        function nextFortVideoSlide() {
+            pauseAllFortVideos();
+            const total = getTotalFortVideoSlides();
+            currentFortVideoIndex = (currentFortVideoIndex + 1) % total;
+            updateFortVideoCarouselPosition();
+        }
+
+        function prevFortVideoSlide() {
+            pauseAllFortVideos();
+            const total = getTotalFortVideoSlides();
+            currentFortVideoIndex = (currentFortVideoIndex - 1 + total) % total;
+            updateFortVideoCarouselPosition();
+        }
+
+        function goToFortVideoSlide(index) {
+            pauseAllFortVideos();
+            currentFortVideoIndex = index;
+            updateFortVideoCarouselPosition();
+        }
+
+        /* ==============================================================
+           8. HISTORICAL TIMELINE
+           ============================================================== */
+        function renderHistoryTimeline() {
+            const grid = document.getElementById('historyTimelineGrid');
+            if (!grid) return;
+            grid.innerHTML = historyTimelineData.map((item, idx) => {
+                const isSpeakingThis = activeHistoryIndex === idx && isVoicePlaying;
+                return `
+                <div onclick="speakHistorySlide(${idx})" class="cursor-pointer bg-fort-900 border-2 ${isSpeakingThis ? 'border-bhagwa ring-2 ring-bhagwa/50' : 'border-amber-500/30 hover:border-bhagwa'} rounded-3xl p-6 sm:p-8 shadow-xl transition group relative overflow-hidden">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="px-3.5 py-1 rounded-full bg-bhagwa/20 border border-bhagwa/50 text-bhagwa-light text-xs font-extrabold">
+                                ${item.year}
+                            </span>
+                            <span class="text-xs font-bold tracking-wider text-amber-400">
+                                ${item.badgeMr}
+                            </span>
+                        </div>
+                        <span class="px-3 py-1 rounded-full ${isSpeakingThis ? 'bg-bhagwa text-white' : 'bg-fort-950 border border-amber-500/30 text-amber-300 group-hover:bg-bhagwa group-hover:text-white'} text-xs font-extrabold flex items-center gap-1.5 transition">
+                            <span>${isSpeakingThis ? '⏹️ थांबवा' : '🔊 माहिती ऐका'}</span>
+                        </span>
+                    </div>
+                    <h3 class="font-heritage text-xl sm:text-2xl text-white mb-3 group-hover:text-amber-300 transition">
+                        ${item.titleMr}
+                    </h3>
+                    <p class="text-xs sm:text-sm text-amber-100/80 leading-relaxed">
+                        ${item.descMr}
+                    </p>
+                </div>
+            `}).join('');
+        }
+
+        /* ==============================================================
+           9. GALLERY & LIGHTBOX
+           ============================================================== */
+        function getSvgPresetMarkup(preset) {
+            switch (preset) {
+                case 'finalFort':
+                    return `
+                        <svg class="w-full h-full object-cover" viewBox="0 0 400 260">
+                            <rect width="400" height="260" fill="#23160E"/>
+                            <circle cx="320" cy="55" r="28" fill="#F59E0B" opacity="0.25"/>
+                            <path d="M20 240 C65 140 120 95 200 90 C280 95 335 140 380 240 Z" fill="#7C4724" stroke="#472813" stroke-width="3"/>
+                            <path d="M95 165 Q200 190 305 165 L300 185 Q200 210 100 185 Z" fill="#8C735B"/>
+                            <path d="M130 120 Q200 140 270 120 L266 138 Q200 158 134 138 Z" fill="#A68B71"/>
+                            <line x1="200" y1="120" x2="200" y2="62" stroke="#FDE68A" stroke-width="3"/>
+                            <polygon points="200,62 242,72 228,82 242,92 200,98" fill="#FF5E0E"/>
+                            <ellipse cx="90" cy="220" rx="65" ry="18" fill="#2D4A1E" opacity="0.8"/>
+                            <ellipse cx="310" cy="220" rx="65" ry="18" fill="#2D4A1E" opacity="0.8"/>
+                        </svg>
+                    `;
+                default:
+                    return `
+                        <svg class="w-full h-full object-cover" viewBox="0 0 400 260">
+                            <rect width="400" height="260" fill="#1B130D"/>
+                            <circle cx="200" cy="130" r="42" fill="#FF5E0E" opacity="0.25"/>
+                            <circle cx="200" cy="130" r="28" fill="#FF5E0E"/>
+                            <polygon points="193,116 218,130 193,144" fill="#FFFFFF"/>
+                        </svg>
+                    `;
+            }
+        }
+
+        function filterGallery(category) {
+            currentGalleryFilter = category;
+            document.querySelectorAll('.gallery-tab').forEach(btn => {
+                btn.className = "gallery-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-fort-950 text-amber-200/80 hover:text-white border border-amber-500/20";
+            });
+            const activeTab = document.getElementById(`tab-${category}`);
+            if (activeTab) {
+                activeTab.className = "gallery-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-bhagwa text-white shadow-lg";
+            }
+            renderGallery();
+        }
+
+        const catLabelsMr = {
+            final: 'पूर्ण झालेला किल्ला',
+            making: 'किल्ला निर्मितीचे क्षण',
+            night: 'रात्रीचा दीपोत्सव',
+            video: 'व्हिडिओ दर्शन'
+        };
+
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            if (!grid) return;
+
+            const allItems = getGalleryItems();
+            const filtered = currentGalleryFilter === 'all'
+                ? allItems
+                : allItems.filter(item => item.category === currentGalleryFilter);
+
+            grid.innerHTML = filtered.map(item => {
+                const title = item.titleMr || item.titleEn || '';
+                const desc = item.descMr || item.descEn || '';
+                const badge = catLabelsMr[item.category] || 'किल्ला दर्शन';
+                const svgFallback = getSvgPresetMarkup(item.svgPreset || 'finalFort');
+
+                let mediaPreview = svgFallback;
+                if (item.url && item.url.trim() !== '' && !item.url.startsWith('PASTE_')) {
+                    mediaPreview = `
+                        <div class="absolute inset-0 z-0">${svgFallback}</div>
+                        <img src="${item.url}" width="960" height="1280" alt="${title}" class="fort-jpeg-img relative z-10 opacity-0 group-hover:scale-105 transition duration-500" onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');" onerror="handleSmartJpegError(this)">
+                    `;
+                }
+
+                return `
+                    <div onclick="openLightbox('${item.id}')" class="group cursor-pointer bg-fort-950 border border-amber-500/30 hover:border-bhagwa rounded-3xl overflow-hidden shadow-xl transition flex flex-col relative">
+                        <div class="relative h-72 sm:h-80 w-full bg-fort-900 overflow-hidden flex items-center justify-center">
+                            ${mediaPreview}
+                            <span class="absolute top-3 left-3 z-20 px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm border border-amber-400/40 text-amber-300 text-xs font-bold">
+                                ${badge}
+                            </span>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+                            <div>
+                                <h3 class="font-heritage text-lg sm:text-xl text-white group-hover:text-amber-300 transition leading-snug">
+                                    ${title}
+                                </h3>
+                                <p class="text-xs sm:text-sm text-amber-100/75 mt-1 line-clamp-3">
+                                    ${desc}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function openLightbox(id) {
+            const items = getGalleryItems();
+            const item = items.find(i => i.id === id);
+            if (!item) return;
+
+            const title = item.titleMr || item.titleEn || '';
+            const desc = item.descMr || item.descEn || '';
+
+            document.getElementById('lightboxBadge').textContent = catLabelsMr[item.category] || 'किल्ला दर्शन';
+            document.getElementById('lightboxTitle').textContent = title;
+            document.getElementById('lightboxDesc').textContent = desc;
+
+            const container = document.getElementById('lightboxMediaContainer');
+            if (item.url && item.url.trim() !== '') {
+                container.innerHTML = `<img src="${item.url}" alt="${title}" class="max-h-[65vh] w-auto object-contain">`;
+            } else {
+                container.innerHTML = `<div class="w-full h-72 sm:h-96">${getSvgPresetMarkup(item.svgPreset || 'finalFort')}</div>`;
+            }
+
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        /* ==============================================================
+           10. TEAM MEMBERS RENDERING
+           ============================================================== */
+        function renderTeam() {
+            const grid = document.getElementById('teamGrid');
+            if (!grid) return;
+
+            const members = getTeamMembers();
+            grid.innerHTML = members.map((m) => {
+                return `
+                    <div class="bg-fort-900/95 border border-amber-500/30 hover:border-bhagwa rounded-2xl p-4 sm:p-5 shadow-lg transition relative group flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-bhagwa to-amber-600 flex items-center justify-center text-white text-lg shadow-md border border-amber-300/40 shrink-0 group-hover:scale-105 transition">
+                            🚩
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <h3 class="font-heritage text-lg sm:text-xl text-white group-hover:text-amber-300 transition truncate">
+                                ${m.nameMr}
+                            </h3>
+                            <span class="text-xs font-semibold text-amber-400/85 block">
+                                प्रतापगड निर्मिती टीम
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        /* ==============================================================
+           11. VISITOR WISHES
+           ============================================================== */
+        function renderVisitorWishes() {
+            const list = document.getElementById('visitorWishesList');
+            if (!list) return;
+            const wishes = getVisitorWishes();
+            list.innerHTML = wishes.map(w => `
+                <div class="bg-fort-950 border border-amber-500/20 rounded-2xl p-4 space-y-1">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-amber-300 text-xs sm:text-sm">🪔 ${w.name}</span>
+                        <span class="text-[11px] text-amber-200/50">${w.time}</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-amber-100/85 leading-relaxed">${w.msg}</p>
+                </div>
+            `).join('');
+        }
+
+        function submitVisitorWish(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('visitorNameInput');
+            const msgInput = document.getElementById('visitorMsgInput');
+            const wishes = getVisitorWishes();
+
+            wishes.unshift({
+                name: nameInput.value.trim(),
+                msg: msgInput.value.trim(),
+                time: 'आत्ताच'
+            });
+            localStorage.setItem('pratapgad_wishes_mr_v2', JSON.stringify(wishes));
+            renderVisitorWishes();
+            nameInput.value = '';
+            msgInput.value = '';
+            lightFestiveDiya();
+        }
+
+        /* ==============================================================
+           12. TOAST NOTIFICATION & SKY ROCKETS
+           ============================================================== */
+        function showToast(message) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = "pointer-events-auto bg-fort-900 border-2 border-amber-400 text-white px-4 py-3 rounded-2xl shadow-2xl text-xs sm:text-sm font-bold flex items-center gap-2 transform transition-all duration-300";
+            toast.innerHTML = `<span>✨</span><span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+
+        let skyRockets = [];
+        let rocketTrailSparks = [];
+        let fireworkParticles = [];
+        let fireworkFlashes = [];
+        let ambientDiyas = [];
+
+        const DIWALI_PALETTES = {
+            navratnaMulti: ['#FF2E93', '#FF5E0E', '#FDE047', '#10B981', '#00F5D4', '#38BDF8', '#A855F7', '#FFFFFF'],
+            royalPinkCyan: ['#FF2E93', '#FF75B5', '#00F5D4', '#38BDF8', '#FDE047'],
+            emeraldGold: ['#10B981', '#34D399', '#FDE047', '#F59E0B', '#6EE7B7'],
+            bhagwaMarigold: ['#FF5E0E', '#FF3B00', '#FBBF24', '#FDE047', '#FFFBEB'],
+            violetGold: ['#A855F7', '#C084FC', '#EC4899', '#FDE047', '#60A5FA']
+        };
+
+        function spawnSkyRocket(customX) {
+            const canvas = document.getElementById('sparksCanvas');
+            if (!canvas) return;
+            const w = canvas.width || window.innerWidth;
+            const h = canvas.height || window.innerHeight;
+
+            const startX = typeof customX === 'number' ? customX : w * (0.10 + Math.random() * 0.80);
+            const startY = h + 15;
+            const targetY = h * (0.12 + Math.random() * 0.36);
+
+            const speedY = -(Math.random() * 3.2 + 9.5);
+            const driftX = (Math.random() - 0.5) * 1.6;
+
+            const patternTypes = Object.keys(DIWALI_PALETTES);
+            const pattern = patternTypes[Math.floor(Math.random() * patternTypes.length)];
+            const palette = DIWALI_PALETTES[pattern];
+            const headColor = palette[Math.floor(Math.random() * palette.length)];
+
+            skyRockets.push({
+                x: startX,
+                y: startY,
+                vx: driftX,
+                vy: speedY,
+                targetY: targetY,
+                wobblePhase: Math.random() * Math.PI * 2,
+                wobbleSpeed: 0.14 + Math.random() * 0.08,
+                headColor: headColor,
+                pattern: pattern,
+                trailHistory: []
+            });
+        }
+
+        function createFireworkExplosion(x, y, pattern) {
+            const palette = DIWALI_PALETTES[pattern] || DIWALI_PALETTES.navratnaMulti;
+
+            fireworkFlashes.push({
+                x, y,
+                radius: 8,
+                maxRadius: 95,
+                alpha: 0.45,
+                color: palette[0]
+            });
+
+            const outerCount = 68;
+            for (let i = 0; i < outerCount; i++) {
+                const angle = (Math.PI * 2 * i) / outerCount + (Math.random() - 0.5) * 0.08;
+                const speed = Math.random() * 4.5 + 4.2;
+                fireworkParticles.push({
+                    x, y,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    radius: Math.random() * 2.4 + 1.4,
+                    color: palette[i % palette.length],
+                    alpha: 0.92,
+                    decay: 0.0085 + Math.random() * 0.005,
+                    gravity: 0.042,
+                    drag: 0.972,
+                    prevX: x,
+                    prevY: y,
+                    twinkle: Math.random() < 0.4
+                });
+            }
+        }
+
+        function initSparksCanvas() {
+            const canvas = document.getElementById('sparksCanvas');
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            ambientDiyas = [];
+            for (let i = 0; i < 20; i++) {
+                ambientDiyas.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: Math.random() * 1.6 + 0.6,
+                    vy: -(Math.random() * 0.3 + 0.12),
+                    vx: (Math.random() - 0.5) * 0.2,
+                    alpha: Math.random() * 0.35 + 0.1
+                });
+            }
+
+            setTimeout(() => {
+                spawnSkyRocket(canvas.width * 0.28);
+                setTimeout(() => spawnSkyRocket(canvas.width * 0.72), 450);
+            }, 600);
+
+            setInterval(() => {
+                if (document.hidden) return;
+                if (skyRockets.length < 4) {
+                    spawnSkyRocket();
+                    if (Math.random() < 0.55) {
+                        setTimeout(() => spawnSkyRocket(), 500);
+                    }
+                }
+            }, 3000);
+
+            function animateSparks() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                ambientDiyas.forEach(p => {
+                    p.y += p.vy;
+                    p.x += p.vx;
+                    if (p.y < -10) {
+                        p.y = canvas.height + 10;
+                        p.x = Math.random() * canvas.width;
+                    }
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(251, 191, 36, ${p.alpha})`;
+                    ctx.fill();
+                });
+
+                for (let i = fireworkFlashes.length - 1; i >= 0; i--) {
+                    const f = fireworkFlashes[i];
+                    f.radius += (f.maxRadius - f.radius) * 0.18;
+                    f.alpha -= 0.035;
+                    if (f.alpha <= 0) {
+                        fireworkFlashes.splice(i, 1);
+                        continue;
+                    }
+                    const grad = ctx.createRadialGradient(f.x, f.y, 1, f.x, f.y, f.radius);
+                    grad.addColorStop(0, f.color);
+                    grad.addColorStop(1, 'rgba(0,0,0,0)');
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(0, f.alpha);
+                    ctx.fillStyle = grad;
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+
+                for (let i = skyRockets.length - 1; i >= 0; i--) {
+                    const r = skyRockets[i];
+                    r.wobblePhase += r.wobbleSpeed;
+                    const wobbleX = Math.sin(r.wobblePhase) * 0.45;
+
+                    r.x += r.vx + wobbleX;
+                    r.y += r.vy;
+                    r.vy += 0.09;
+
+                    r.trailHistory.push({ x: r.x, y: r.y });
+                    if (r.trailHistory.length > 8) r.trailHistory.shift();
+
+                    for (let s = 0; s < 2; s++) {
+                        rocketTrailSparks.push({
+                            x: r.x + (Math.random() - 0.5) * 4,
+                            y: r.y + 3,
+                            vx: (Math.random() - 0.5) * 1.2,
+                            vy: Math.random() * 1.8 + 0.5,
+                            radius: Math.random() * 1.8 + 0.8,
+                            alpha: 0.75,
+                            decay: 0.04,
+                            color: s === 0 ? r.headColor : '#FDE047'
+                        });
+                    }
+
+                    if (r.trailHistory.length > 1) {
+                        ctx.beginPath();
+                        ctx.moveTo(r.trailHistory[0].x, r.trailHistory[0].y);
+                        for (let t = 1; t < r.trailHistory.length; t++) {
+                            ctx.lineTo(r.trailHistory[t].x, r.trailHistory[t].y);
+                        }
+                        ctx.strokeStyle = r.headColor;
+                        ctx.lineWidth = 2.4;
+                        ctx.lineCap = 'round';
+                        ctx.stroke();
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(r.x, r.y, 3.2, 0, Math.PI * 2);
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fill();
+
+                    if (r.y <= r.targetY || r.vy >= -1.0) {
+                        createFireworkExplosion(r.x, r.y, r.pattern);
+                        skyRockets.splice(i, 1);
+                    }
+                }
+
+                for (let i = rocketTrailSparks.length - 1; i >= 0; i--) {
+                    const s = rocketTrailSparks[i];
+                    s.x += s.vx;
+                    s.y += s.vy;
+                    s.alpha -= s.decay;
+                    if (s.alpha <= 0) {
+                        rocketTrailSparks.splice(i, 1);
+                        continue;
+                    }
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = s.color;
+                    ctx.globalAlpha = Math.max(0, s.alpha);
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
+
+                for (let i = fireworkParticles.length - 1; i >= 0; i--) {
+                    const p = fireworkParticles[i];
+                    p.prevX = p.x;
+                    p.prevY = p.y;
+                    p.vx *= p.drag;
+                    p.vy *= p.drag;
+                    p.vy += p.gravity;
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.alpha -= p.decay;
+
+                    if (p.alpha <= 0) {
+                        fireworkParticles.splice(i, 1);
+                        continue;
+                    }
+
+                    const twinkleAlpha = p.twinkle
+                        ? p.alpha * (0.65 + 0.35 * Math.sin(Date.now() * 0.025 + i))
+                        : p.alpha;
+
+                    ctx.beginPath();
+                    ctx.moveTo(p.prevX, p.prevY);
+                    ctx.lineTo(p.x, p.y);
+                    ctx.strokeStyle = p.color;
+                    ctx.lineWidth = p.radius * 1.15;
+                    ctx.lineCap = 'round';
+                    ctx.globalAlpha = Math.max(0, twinkleAlpha);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.fill();
+                }
+                ctx.globalAlpha = 1;
+
+                requestAnimationFrame(animateSparks);
+            }
+            animateSparks();
+        }
+
+        /* ==============================================================
+           13. INITIALIZATION ON WINDOW LOAD
+           ============================================================== */
+        function initializePratapgadShowcase() {
+            try { updateDiyaCounterUI(); } catch (e) {}
+            try { selectHotspot(1, false); } catch (e) {}
+            try { renderFortPhotosCarousel(); } catch (e) {}
+            try { renderFortVideosCarousel(); } catch (e) {}
+            try { renderTeam(); } catch (e) {}
+            try { renderHistoryTimeline(); } catch (e) {}
+            try { renderGallery(); } catch (e) {}
+            try { renderVisitorWishes(); } catch (e) {}
+            try { initSparksCanvas(); } catch (e) {}
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePratapgadShowcase);
+        } else {
+            initializePratapgadShowcase();
+        }
+        window.onload = initializePratapgadShowcase;
+    </script>
+</body>
+</html>
